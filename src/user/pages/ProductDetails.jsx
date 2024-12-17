@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useUser } from "../../context/UserContext";
+// import { useUser } from "../../context/UserContext";
+import { useCart } from "../../context/CartContext";
 
 const ProductDetails = () => {
   const { id } = useParams(); // Get product ID from URL
@@ -9,7 +10,7 @@ const ProductDetails = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const { addToCart } = useUser();
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchProduct = async () => {

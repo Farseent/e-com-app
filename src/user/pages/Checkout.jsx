@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { useUser } from "../../context/UserContext";
+// import { useUser } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 
 const Checkout = () => {
-  const { cart } = useUser();
+  const { cart } = useCart();
   const getTotalPrice = () =>
-    cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  cart.reduce((total, item) => total + item.price * item.quantity, 0);
   const navigate = useNavigate();
 
   const [selectedPayment, setSelectedPayment] = useState("");

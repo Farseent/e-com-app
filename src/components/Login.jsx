@@ -4,7 +4,7 @@ import axios from "axios";
 import { useUser } from "../context/UserContext";
 
 const Login = () => {
-  const { setEmail, handleLogout, email } = useUser();
+  const { handleLogin } = useUser(); // Use handleLogin for logging in
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
@@ -22,9 +22,8 @@ const Login = () => {
       });
 
       if (data.length > 0) {
-        setEmail(data[0].email); // Save email in context and persist login
-        localStorage.setItem("email", data[0].email); // Persist email to localStorage
-        navigate("/");
+        handleLogin(data[0].email); // Use handleLogin instead of directly calling setEmail
+        navigate("/"); // Redirect to home page
       } else {
         setMessage("Invalid email or password");
       }
@@ -74,17 +73,6 @@ const Login = () => {
             <h1 className="mt-2 text-blue-600">Sign up</h1>
           </NavLink>
         </div>
-        {email && (
-          <button
-            onClick={() => {
-              handleLogout();
-              navigate("/");
-            }}
-            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 mt-3 rounded"
-          >
-            Log Out
-          </button>
-        )}
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ function App() {
         </div>
       <Footer/>
     </div>
-    </UserProvider>
+   </UserProvider>
   );
 }
 

@@ -1,9 +1,10 @@
 import React from "react";
 import { useUser } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useCart } from "../../context/CartContext";
 
 const Cart = () => {
-  const { cart, removeFromCart, clearCart, updateQuantity } = useUser();
+  const { cart, removeFromCart, clearCart, updateQuantity } = useCart();
   const navigate = useNavigate(); // Initialize navigate
 
   const getTotalPrice = () =>
