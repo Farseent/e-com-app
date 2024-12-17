@@ -1,1 +1,150 @@
-{}
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 16 Pro Max",
+      "price": 149900,
+      "image": "https://m.media-amazon.com/images/I/61giwQtR1qL._SX569_.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S24 Ultra",
+      "price": 119900,
+      "image": "https://m.media-amazon.com/images/I/41HLaX4vwiL._SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Google Pixel 9 Pro",
+      "price": 99900,
+      "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/mobile/q/b/g/-original-imah3zznscgh3fgk.jpeg?q=20&crop=false"
+    },
+    {
+      "id": "4",
+      "name": "OnePlus 12",
+      "price": 89900,
+      "image": "https://m.media-amazon.com/images/I/41OpAzcvdLL._SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Xiaomi 14 Pro",
+      "price": 79900,
+      "image": "https://m.media-amazon.com/images/I/41O+9LbIOUL._SY300_SX300_.jpg"
+    },
+    {
+      "id": "6",
+      "name": "iPhone 16",
+      "price": 89900,
+      "image": "https://m.media-amazon.com/images/I/61lLjrvDEkL._SX679_.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Vivo X200 Pro",
+      "price": 94999,
+      "image": "https://m.media-amazon.com/images/I/71chuQByj0L._SX679_.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Samsung Galaxy S24",
+      "price": 59900,
+      "image": "https://m.media-amazon.com/images/I/71r4P+34FuL._SX679_.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Realme GT Neo 6 Pro",
+      "price": 49900,
+      "image": "https://example.com/realme_gt_neo_6_pro.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Motorola Edge 40 Pro",
+      "price": 44900,
+      "image": "https://example.com/motorola_edge_40_pro.jpg"
+    },
+    {
+      "id": "11",
+      "name": "iQOO Neo 8 Pro",
+      "price": 39900,
+      "image": "https://example.com/iqoo_neo_8_pro.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Tecno Phantom X3 Pro",
+      "price": 34900,
+      "image": "https://example.com/tecno_phantom_x3_pro.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Poco X6 Pro 5G",
+      "price": 29900,
+      "image": "https://example.com/poco_x6_pro_5g.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Infinix Zero Ultra 5G",
+      "price": 24900,
+      "image": "https://example.com/infinix_zero_ultra_5g.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Narzo 60 Pro 5G",
+      "price": 19900,
+      "image": "https://example.com/narzo_60_pro_5g.jpg"
+    },
+    {
+      "id": "16",
+      "name": "Redmi Note 13 Pro Plus 5G",
+      "price": 14900,
+      "image": "https://example.com/redmi_note_13_pro_plus_5g.jpg"
+    },
+    {
+      "id": "17",
+      "name": "Samsung Galaxy A55 5G",
+      "price": 12900,
+      "image": "https://example.com/samsung_galaxy_a55_5g.jpg"
+    },
+    {
+      "id": "18",
+      "name": "OPPO A78 5G",
+      "price": 10900,
+      "image": "https://example.com/oppo_a78_5g.jpg"
+    },
+    {
+      "id": "19",
+      "name": "Vivo Y36",
+      "price": 9900,
+      "image": "https://example.com/vivo_y36.jpg"
+    },
+    {
+      "id": "20",
+      "name": "Tecno Spark 11 Pro",
+      "price": 8900,
+      "image": "https://example.com/tecno_spark_11_pro.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "61fb",
+      "name": "Farseen ",
+      "email": "farseen247@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "450c",
+      "name": "example",
+      "email": "example@mail.com",
+      "password": "example"
+    },
+    {
+      "id": "2f7b",
+      "name": "name",
+      "email": "name@example.com",
+      "password": "name"
+    },
+    {
+      "id": "b5d8",
+      "name": "luffy",
+      "email": "luffy@gmail.com",
+      "password": "luffy"
+    }
+  ]
+}
