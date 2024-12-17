@@ -7,6 +7,7 @@ const Navbar = () => {
 
   const { username,setUsername } = useUser();
   const [loggedIn, setLoggedIn] = useState(false);
+  const{email,handleLogout} = useUser();
 
   const handleAuthClick = () => {
     if (loggedIn) {
@@ -46,16 +47,23 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex items-center space-x-4 mt-2 md:mt-0">
-        <h1 className="font-semibold text-white text-sm md:text-base">{username}</h1>
-       {/* <NavLink to={"/Login"} > <button className="bg-red-400 h-9 px-3 rounded text-white hover:bg-red-500">
-          Log in
-        </button></NavLink> */}
-        <button
-          onClick={handleAuthClick}
-          className="bg-red-400 h-9 px-3 rounded text-white hover:bg-red-500"
-        >
-          {loggedIn ? "Log out" : "Log in"}
-        </button>
+        {email ? (
+          <>
+            <h1 className="font-semibold text-white text-sm md:text-base">{email}</h1>
+            <button
+              onClick={handleLogout}
+              className="bg-red-500 h-9 px-3 rounded text-white hover:bg-red-600"
+            >
+              Log Out
+            </button>
+          </>
+        ) : (
+          <NavLink to="/login">
+            <button className="bg-red-400 h-9 px-3 rounded text-white hover:bg-red-500">
+              Log In
+            </button>
+          </NavLink>
+        )}
       </div>
     </div>
   );

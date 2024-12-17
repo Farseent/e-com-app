@@ -5,7 +5,7 @@ const UserContext = createContext();
 
 // Provider
 export const UserProvider = ({ children }) => {
-  const [username, setUsername] = useState("user");
+  const [email, setEmail] = useState(() => localStorage.getItem("email") || "");
   const [cart, setCart] = useState([]);
   const [orders, setOrders] = useState([]); // State to store placed orders
 
@@ -48,11 +48,23 @@ export const UserProvider = ({ children }) => {
     setCart([]); // Clear cart after placing order
   };
 
+  const handleLogin = (userEmail) => {
+    localStorage.setItem("email", userEmail);
+    setEmail(userEmail);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("email");
+    setEmail("");
+  };
+
   return (
     <UserContext.Provider
       value={{
-        username,
-        setUsername,
+        email,
+        handleLogin,
+        setEmail,
+        handleLogout,
         cart,
         addToCart,
         removeFromCart,
