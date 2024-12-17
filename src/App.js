@@ -14,22 +14,22 @@ import { UserProvider } from './context/UserContext';
 function App() {
   return (
     <UserProvider>
-     {/* <Router> */}
-    
+     <div className="flex flex-col min-h-screen">
       <Navbar/>
-      <Routes>
-        <Route path="/" element = { <Home/> } />
-        <Route path="/login" element = { <Login/> } />
-        <Route path="/Signup" element = { <Signup/> } />
-        <Route path="/products" element = { <ProductList/> } />
-        <Route path="/product-details" element = { <ProductDetails/> } />
-        <Route path="/cart" element = { <Cart/> } />
-        <Route path="/checkout" element = { <Checkout/> } />
-        <Route path="/orders" element = { <Orders/> } />
-      </Routes>
+      <div className="flex-grow">
+          <Routes>
+            <Route path="/" element = { <Home/> } />
+            <Route path="/login" element = { <Login/> } />
+            <Route path="/Signup" element = { <Signup/> } />
+            <Route path="/products" element = { <ProductList/> } />
+            <Route path="/product-details/:id" element = { <ProductDetails/> } />
+            <Route path="/cart" element = { <Cart/> } />
+            <Route path="/checkout" element = { <Checkout/> } />
+            <Route path="/orders" element = { <Orders/> } />
+          </Routes>
+        </div>
       <Footer/>
-    
-     {/* </Router> */}
+    </div>
     </UserProvider>
   );
 }

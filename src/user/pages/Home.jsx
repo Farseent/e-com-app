@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { useUser } from "../../context/UserContext";
+
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const [error, setError] = useState(""); 
+  const [error, setError] = useState("");
+  const { addToCart } = useUser(); 
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -29,8 +33,13 @@ const Home = () => {
             products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition p-4"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition p-4 relative"
               >
+                <Link
+                  to={`/product-details/${product.id}`}
+                  className="absolute inset-0"
+                  aria-label={`View details of ${product.name}`}
+                ></Link>
                 {product.image ? (
                   <img
                     src={product.image}
@@ -47,12 +56,16 @@ const Home = () => {
                   <p className="text-gray-500">₹{product.price}</p>
                   <button
                     className="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition"
-                    onClick={() => alert(`Added ${product.name} to the cart!`)}
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent Link navigation when button is clicked
+                      addToCart(product); // Add the product to the cart
+                    }}
                   >
                     Add to Cart
                   </button>
                 </div>
               </div>
+               
             ))
           ) : (
             <p className="text-gray-500 text-lg text-center col-span-4">No products available</p>
