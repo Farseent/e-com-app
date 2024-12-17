@@ -1,10 +1,18 @@
 import React from "react";
 import { useUser } from "../../context/UserContext";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Cart = () => {
-  const { cart, removeFromCart, clearCart,updateQuantity } = useUser();
+  const { cart, removeFromCart, clearCart, updateQuantity } = useUser();
+  const navigate = useNavigate(); // Initialize navigate
 
-  const getTotalPrice = () => cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const getTotalPrice = () =>
+    cart.reduce((total, item) => total + item.price * item.quantity, 0);
+
+  const handleCheckout = () => {
+    // Redirect to checkout page
+    navigate("/checkout");
+  };
 
   return (
     <div className="max-w-4xl mx-auto py-8 px-4">
@@ -12,7 +20,10 @@ const Cart = () => {
       {cart.length > 0 ? (
         <>
           {cart.map((product) => (
-            <div key={product.id} className="flex items-center justify-between border-b py-4">
+            <div
+              key={product.id}
+              className="flex items-center justify-between border-b py-4"
+            >
               <div className="flex items-center">
                 <img
                   src={product.image}
@@ -52,12 +63,20 @@ const Cart = () => {
           ))}
           <div className="mt-6 flex justify-between items-center">
             <h3 className="text-xl font-bold">Total: ₹{getTotalPrice()}</h3>
-            <button
-              onClick={clearCart}
-              className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600"
-            >
-              Clear Cart
-            </button>
+            <div className="space-x-4">
+              <button
+                onClick={clearCart}
+                className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600"
+              >
+                Clear Cart
+              </button>
+              <button
+                onClick={handleCheckout}
+                className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
+              >
+                Checkout
+              </button>
+            </div>
           </div>
         </>
       ) : (

@@ -7,6 +7,7 @@ const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   const [username, setUsername] = useState("user");
   const [cart, setCart] = useState([]);
+  const [orders, setOrders] = useState([]); // State to store placed orders
 
   const addToCart = (product) => {
     const productExists = cart.find((item) => item.id === product.id);
@@ -36,10 +37,15 @@ export const UserProvider = ({ children }) => {
     setCart(
       cart.map((item) =>
         item.id === productId
-          ? { ...item, quantity: Math.max(1, item.quantity + change) } // Prevent quantity going below 1
+          ? { ...item, quantity: Math.max(1, item.quantity + change) } 
           : item
       )
     );
+  };
+
+  const placeOrder = (orderDetails) => {
+    setOrders((prevOrders) => [...prevOrders, orderDetails]);
+    setCart([]); // Clear cart after placing order
   };
 
   return (
@@ -51,7 +57,9 @@ export const UserProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         clearCart,
-        updateQuantity, // Expose this method
+        updateQuantity,
+        orders,
+        placeOrder,
       }}
     >
       {children}
