@@ -7,11 +7,20 @@ const Orders = () => {
 
   useEffect(() => {
     if (email) {
-      fetch(`http://localhost:5000/orders?email=${email}`)
+      fetch(`http://localhost:5001/orders?email=${email}`)
         .then((res) => res.json())
-        .then((data) => setOrders(data));
+        .then((data) => {
+          if (Array.isArray(data)) {
+            setOrders(data);
+          } else {
+            console.error("Unexpected response format:", data);
+            setOrders([]);
+          }
+        })
+        .catch((err) => console.error("Error fetching orders:", err));
     }
   }, [email]);
+  
 
   if (!email) return <p>Please log in to view orders</p>;
 
@@ -24,6 +33,8 @@ const Orders = () => {
             <p><strong>Order ID:</strong> {order.id}</p>
             <p><strong>Items:</strong> {order.items.join(", ")}</p>
             <p><strong>Total:</strong> ₹{order.total}</p>
+            <p><strong>Payment Method:</strong> {order.paymentMethod}</p>
+            <p><strong>Date:</strong> {new Date(order.date).toLocaleString()}</p>
           </div>
         ))
       ) : (
@@ -34,3 +45,5 @@ const Orders = () => {
 };
 
 export default Orders;
+
+//npx json-server --watch order.json --port 5000

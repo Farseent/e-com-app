@@ -1,11 +1,12 @@
 import React from "react";
 import { useUser } from "../../context/UserContext";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 import { useCart } from "../../context/CartContext";
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart, updateQuantity } = useCart();
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
+  const { email } = useUser()
 
   const getTotalPrice = () =>
     cart.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -14,6 +15,8 @@ const Cart = () => {
     // Redirect to checkout page
     navigate("/checkout");
   };
+
+  if (!email) return <p>Please log in to view orders</p>;
 
   return (
     <div className="max-w-4xl mx-auto py-8 px-4">

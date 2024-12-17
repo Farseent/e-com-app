@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useUser } from "../../context/UserContext";
+// import { useUser } from "../../context/UserContext";
+import { useCart } from "../../context/CartContext";
 
 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState("");
-  const { addToCart } = useUser(); 
+  const { addToCart } = useCart(); 
 
   useEffect(() => {
     const fetchProducts = async () => {

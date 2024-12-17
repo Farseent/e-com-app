@@ -1,24 +1,56 @@
 import React, { useState } from "react";
-// import { useUser } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
+import { useUser } from "../../context/UserContext";
 
 const Checkout = () => {
-  const { cart } = useCart();
-  const getTotalPrice = () =>
-  cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const { cart , clearCart } = useCart();
+  const { email } = useUser()
+  const getTotalPrice = () =>  cart.reduce((total, item) => total + item.price * item.quantity, 0);
   const navigate = useNavigate();
-
   const [selectedPayment, setSelectedPayment] = useState("");
 
-  const handleOrderConfirmation = () => {
+
+
+  const handleOrderConfirmation = async () => {
     if (!selectedPayment) {
       alert("Please select a payment method to proceed.");
       return;
     }
+    const orderDetails = {
+      email, // Get from UserContext
+      items: cart.map((item) => ({
+        id: item.id,
+        name: item.name,
+        quantity: item.quantity,
+        price: item.price,
+      })),
+      total: getTotalPrice(),
+      paymentMethod: selectedPayment,
+      date: new Date().toISOString(),
+    };
 
-    alert(`Order placed successfully with ${selectedPayment}!`);
-    navigate("/orders"); // Redirect back to home page after order confirmation
+    try {
+      const response = await fetch("http://localhost:5001/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderDetails),
+      });
+
+      if (response.ok) {
+        alert(`Order placed successfully with ${selectedPayment}!`);
+        clearCart(); // Clear the cart after placing the order
+        navigate("/orders");
+      } else {
+        alert("Failed to place the order. Please try again.");
+      }
+    } catch (error) {
+      console.error("Order Error:", error);
+      alert("An error occurred while placing the order.");
+    }
+
   };
 
   return (
