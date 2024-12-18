@@ -17,13 +17,18 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Send login request to the server
       const { data } = await axios.get("http://localhost:5000/users", {
         params: { email: form.email, password: form.password },
       });
 
       if (data.length > 0) {
-        handleLogin(data[0].email); // Use handleLogin instead of directly calling setEmail
-        navigate("/"); // Redirect to home page
+        // Assuming the API returns the user's email and name
+        const userEmail = data[0].email;
+        const userName = data[0].name;
+
+        handleLogin(userEmail, userName); // Pass both email and name to handleLogin
+        navigate("/"); // Redirect to the home page
       } else {
         setMessage("Invalid email or password");
       }

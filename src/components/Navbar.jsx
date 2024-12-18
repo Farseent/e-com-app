@@ -1,33 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { FiSearch } from "react-icons/fi"; 
 import { NavLink } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 
 const Navbar = () => {
+  const { email, handleLogout, name } = useUser();
 
-  const { username,setUsername } = useUser();
-  const [loggedIn, setLoggedIn] = useState(false);
-  const{email,handleLogout} = useUser();
-
-  const handleAuthClick = () => {
-    if (loggedIn) {
-      // Handle logout
-      setUsername(""); // Clear the username (if applicable)
-      console.log("Logged out!");
-    } else {
-      // Handle login (redirect to login page or similar logic)
-      console.log("Redirecting to login...");
-    }
-    setLoggedIn(!loggedIn); // Toggle login state
-  };
-
-  
   return (
     <div className="flex flex-wrap md:flex-nowrap bg-blue-700 w-full h-auto md:h-[75px] justify-between items-center px-4 py-2">
       <div className="flex items-center">
         <h1 className="font-bold text-2xl md:text-xl lg:text-3xl font-serif text-white">
           E-Cart
-        </h1>  
+        </h1>
       </div>
       <ul className="flex flex-row space-x-5 text-white text-sm md:text-base lg:text-lg">
         <NavLink to={'/'}><li>Home</li></NavLink>
@@ -49,7 +33,7 @@ const Navbar = () => {
       <div className="flex items-center space-x-4 mt-2 md:mt-0">
         {email ? (
           <>
-            <h1 className="font-semibold text-white text-sm md:text-base">{email}</h1>
+            <h1 className="font-semibold text-white text-sm md:text-base">{name}</h1>
             <button
               onClick={handleLogout}
               className="bg-red-500 h-9 px-3 rounded text-white hover:bg-red-600"

@@ -120,16 +120,10 @@
       "password": "example"
     },
     {
-      "id": "2f7b",
-      "name": "name",
+      "id": "180f",
+      "name": "Name",
       "email": "name@example.com",
       "password": "name"
-    },
-    {
-      "id": "b5d8",
-      "name": "luffy",
-      "email": "luffy@gmail.com",
-      "password": "luffy"
     }
   ],
   "cart": [
