@@ -15,7 +15,7 @@ const fetchOrders = () => {
 
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
-    const [orderForm, setOrderForm] = useState({ id: '', status: '' });
+    // const [orderForm, setOrderForm] = useState({ id: '', status: '' });
 
     // Fetch orders when the component mounts
     useEffect(() => {

@@ -5,11 +5,12 @@ import { useUser } from "../../context/UserContext";
 
 const Checkout = () => {
   const { cart , clearCart } = useCart();
-  const { email } = useUser()
+  const { user } = useUser()
   const getTotalPrice = () =>  cart.reduce((total, item) => total + item.price * item.quantity, 0);
   const navigate = useNavigate();
   const [selectedPayment, setSelectedPayment] = useState("");
 
+  const [address, setAddress] = useState({ street: "", city: "", state: "", zip: "", country: ""})
 
 
   const handleOrderConfirmation = async () => {
@@ -17,8 +18,12 @@ const Checkout = () => {
       alert("Please select a payment method to proceed.");
       return;
     }
+    if (!address.street || !address.city || !address.state || !address.zip || !address.country) { 
+        alert("Please fill out all address fields."); 
+        return; 
+    }
     const orderDetails = {
-      email, // Get from UserContext
+      user, // Get from UserContext
       items: cart.map((item) => ({
         id: item.id,
         name: item.name,
@@ -27,6 +32,7 @@ const Checkout = () => {
       })),
       total: getTotalPrice(),
       paymentMethod: selectedPayment,
+      address: address,
       date: new Date().toISOString(),
     };
 
@@ -52,6 +58,11 @@ const Checkout = () => {
     }
 
   };
+  const handleAddressChange = (e) => { 
+    const { name, value } = e.target; 
+    setAddress((prevAddress) => 
+        ({ ...prevAddress, [name]: value, }));
+    }
 
   return (
     <div className="max-w-4xl mx-auto py-8 px-4">
@@ -91,6 +102,23 @@ const Checkout = () => {
           <div className="mt-4 text-lg font-semibold">
             <p className="mb-2">Total Amount: ₹{getTotalPrice()}</p>
           </div>
+
+          {/* Address Input Section */} 
+          <div className="mt-4"> 
+            <h3 className="text-lg font-semibold mb-2">Shipping Address:</h3> 
+            <div className="space-y-2"> 
+                <input type="text" name="street" placeholder="Street Address" value={address.street} 
+                    onChange={handleAddressChange} className="w-full border p-2 rounded" required /> 
+                <input type="text" name="city" placeholder="City" value={address.city} 
+                    onChange={handleAddressChange} className="w-full border p-2 rounded" required /> 
+                <input type="text" name="state" placeholder="State" value={address.state} 
+                    onChange={handleAddressChange} className="w-full border p-2 rounded" required /> 
+                <input type="text" name="zip" placeholder="ZIP Code" value={address.zip} 
+                    onChange={handleAddressChange} className="w-full border p-2 rounded" required /> 
+                <input type="text" name="country" placeholder="Country" value={address.country} 
+                    onChange={handleAddressChange} className="w-full border p-2 rounded" required /> 
+            </div> 
+            </div>
 
           {/* Payment Methods Section */}
           <div className="mt-4">

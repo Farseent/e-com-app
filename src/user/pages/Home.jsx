@@ -33,7 +33,7 @@ const Home = () => {
             products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition p-4 relative"
+                className="bg-white rounded-lg shadow-md p-4 relative  hover:shadow-xl transform transition duration-300 hover:scale-105"
               >
                 {product.image?(
                 <Link
