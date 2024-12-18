@@ -1,22 +1,21 @@
 import React from "react";
-import { useUser } from "../../context/UserContext";
-import { useNavigate } from "react-router-dom"; 
 import { useCart } from "../../context/CartContext";
+import { useNavigate } from "react-router-dom"; 
+import { useUser } from "../../context/UserContext";
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart, updateQuantity } = useCart();
-  const navigate = useNavigate(); 
-  const { email } = useUser()
+  const navigate = useNavigate();
+  const { email } = useUser();
 
   const getTotalPrice = () =>
     cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
   const handleCheckout = () => {
-    // Redirect to checkout page
     navigate("/checkout");
   };
 
-  if (!email) return <p>Please log in to view orders</p>;
+  if (!email) return <p>Please log in to view your cart.</p>;
 
   return (
     <div className="max-w-4xl mx-auto py-8 px-4">
@@ -44,7 +43,7 @@ const Cart = () => {
                 <button
                   onClick={() => updateQuantity(product.id, -1)}
                   className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
-                  disabled={product.quantity <= 1} // Prevent reducing below 1
+                  disabled={product.quantity <= 1}
                 >
                   -
                 </button>

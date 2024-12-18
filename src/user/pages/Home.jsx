@@ -36,17 +36,18 @@ const Home = () => {
                 key={product.id}
                 className="bg-white rounded-lg shadow-md hover:shadow-lg transition p-4 relative"
               >
+                {product.image?(
                 <Link
                   to={`/product-details/${product.id}`}
-                  className="absolute inset-0"
+                  className="block"
                   aria-label={`View details of ${product.name}`}
-                ></Link>
-                {product.image ? (
+                >
                   <img
                     src={product.image}
                     alt={product.name}
                     className="rounded-t-lg w-full h-48 object-contain"
                   />
+                </Link>
                 ) : (
                   <div className="w-full h-48 bg-gray-200 rounded-t-lg flex items-center justify-center">
                     <span className="text-gray-600 text-sm">No Image</span>
@@ -60,6 +61,7 @@ const Home = () => {
                     onClick={(e) => {
                       e.preventDefault(); // Prevent Link navigation when button is clicked
                       addToCart(product); // Add the product to the cart
+                      alert(`Added ${product.name} to the cart!`)
                     }}
                   >
                     Add to Cart

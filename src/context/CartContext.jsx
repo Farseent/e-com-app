@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { useUser } from "./UserContext";
 
 // Create CartContext
 const CartContext = createContext();
@@ -7,40 +8,90 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [orders, setOrders] = useState([]);
+  const { email } = useUser();
+
+
+   // Fetch cart items from the database on component mount or when email changes
+   useEffect(() => {
+    if (email) {
+      fetch(`http://localhost:5000/cart?email=${email}`)
+        .then((res) => res.json())
+        .then((data) => setCart(data || []))
+        .catch((err) => console.error("Error fetching cart data:", err));
+    } else {
+      setCart([]);
+    }
+  }, [email]);
 
   const addToCart = (product) => {
-    const productExists = cart.find((item) => item.id === product.id);
-
-    if (productExists) {
-      setCart(
-        cart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
+    if (!email) {
+      console.error("User not logged in");
+      return;
     }
+
+    fetch(`http://localhost:5000/cart`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...product, email }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCart((prevCart) => [...prevCart, { ...product, quantity: 1 }]);
+      })
+      .catch((err) => console.error("Error adding to cart:", err));
   };
 
   const removeFromCart = (productId) => {
-    setCart(cart.filter((item) => item.id !== productId));
+    if (!email) {
+      console.error("User not logged in");
+      return;
+    }
+
+    fetch(`http://localhost:5000/cart/${productId}?email=${email}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+      })
+      .catch((err) => console.error("Error removing from cart:", err));
   };
 
   const clearCart = () => {
-    setCart([]);
+    if (!email) {
+      console.error("User not logged in");
+      return;
+    }
+
+    fetch(`http://localhost:5000/cart/clear?email=${email}`, {
+      method: "DELETE",
+    })
+      .then(() => setCart([]))
+      .catch((err) => console.error("Error clearing cart:", err));
   };
 
-  const updateQuantity = (productId, change) => {
-    setCart(
-      cart.map((item) =>
-        item.id === productId
-          ? { ...item, quantity: Math.max(1, item.quantity + change) }
-          : item
-      )
-    );
+  const updateQuantity = (productId, amount) => {
+    if (!email) {
+      console.error("User not logged in");
+      return;
+    }
+
+    fetch(`http://localhost:5000/cart/${productId}?email=${email}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ quantity: amount }),
+    })
+      .then(() => {
+        setCart((prevCart) =>
+          prevCart.map((item) =>
+            item.id === productId
+              ? { ...item, quantity: item.quantity + amount }
+              : item
+          )
+        );
+      })
+      .catch((err) => console.error("Error updating quantity:", err));
   };
+
 
   const placeOrder = (orderDetails) => {
     setOrders((prevOrders) => [...prevOrders, orderDetails]);
