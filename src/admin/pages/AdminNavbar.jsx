@@ -1,41 +1,76 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaTachometerAlt, FaBox, FaUsers, FaShoppingCart, FaChartBar, FaSignOutAlt } from 'react-icons/fa';
 
 const AdminNavbar = () => {
-    return(
-    <nav className="bg-gray-800 text-white shadow-md">
-    <div className="container mx-auto p-4 flex items-center justify-center">
-        <h2 className="text-xl font-bold">Admin Panel</h2>
-        {/* Optional: You can add a logout button or other items here */}
-    </div>
-    <div className="flex flex-col-r gap-2 p-4 items-center justify-center">
-        <Link 
-            to="/admin" 
-            className="block px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300">
-            Dashboard
-        </Link>
-        <Link 
-            to="/admin/manageproduct" 
-            className="block px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300">
-            Manage Products
-        </Link>
-        <Link 
-            to="/admin/manageusers" 
-            className="block px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300">
-            Manage Users
-        </Link>
-        <Link 
-            to="/admin/manageorders" 
-            className="block px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300">
-            Manage orders
-        </Link>
-        <Link 
-            to="/admin/reports" 
-            className="block px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300">
-            Reports
-        </Link>
-    </div>
-</nav>
-);
-}
+    return (
+        <div className="bg-gray-900 text-white w-64 h-screen fixed">
+            {/* Header */}
+            <div className="p-6 border-b border-gray-700">
+                <h1 className="text-2xl font-bold">Admin Panel</h1>
+            </div>
+
+            {/* Navigation Links */}
+            <ul className="mt-6 space-y-2 px-4">
+                <li>
+                    <Link
+                        to="/admin"
+                        className="flex items-center px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-700 transition-all duration-300"
+                    >
+                        <FaTachometerAlt className="mr-3" />
+                        Dashboard
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/admin/manageproduct"
+                        className="flex items-center px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-700 transition-all duration-300"
+                    >
+                        <FaBox className="mr-3" />
+                        Manage Products
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/admin/manageusers"
+                        className="flex items-center px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-700 transition-all duration-300"
+                    >
+                        <FaUsers className="mr-3" />
+                        Manage Users
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/admin/manageorders"
+                        className="flex items-center px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-700 transition-all duration-300"
+                    >
+                        <FaShoppingCart className="mr-3" />
+                        Manage Orders
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/admin/reports"
+                        className="flex items-center px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-700 transition-all duration-300"
+                    >
+                        <FaChartBar className="mr-3" />
+                        Reports
+                    </Link>
+                </li>
+            </ul>
+
+            {/* Footer (e.g., Logout Button) */}
+            <div className="absolute bottom-0 w-full p-4 border-t border-gray-700">
+                <button
+                    className="flex items-center w-full px-4 py-2 text-sm font-medium rounded-lg hover:bg-red-700 transition-all duration-300"
+                >
+                    <FaSignOutAlt className="mr-3" />
+                    Logout
+                </button>
+            </div>
+        </div>
+    );
+};
+
+
 export default AdminNavbar;

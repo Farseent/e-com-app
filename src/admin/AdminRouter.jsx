@@ -11,7 +11,7 @@ import Reports from './pages/Reports';
   return (
     <div >
         <AdminNavbar/>
-        <div >
+        <div className="ml-64 flex-grow p-6 bg-gray-100 min-h-screen" >
         <Routes>
             <Route path="/" element = { <Dashboard/> } />
             <Route path="/manageproduct" element = { <ManageProducts/> } />
