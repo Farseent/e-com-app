@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import { useUser } from "../../context/UserContext";
 import { useCart } from "../../context/CartContext";
 
 
@@ -59,8 +58,8 @@ const Home = () => {
                   <button
                     className="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition"
                     onClick={(e) => {
-                      e.preventDefault(); // Prevent Link navigation when button is clicked
-                      addToCart(product); // Add the product to the cart
+                      e.preventDefault();
+                      addToCart(product); 
                       alert(`Added ${product.name} to the cart!`)
                     }}
                   >
