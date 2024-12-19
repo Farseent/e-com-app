@@ -47,14 +47,14 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="/cart"
               className={({ isActive }) =>
                 isActive ? "text-yellow-400" : "hover:text-yellow-300"
               }
             >
               Cart
-            </NavLink>
+            </NavLink> */}
             <NavLink
               to="/orders"
               className={({ isActive }) =>

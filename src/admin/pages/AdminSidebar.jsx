@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaTachometerAlt, FaBox, FaUsers, FaShoppingCart, FaChartBar, FaSignOutAlt } from 'react-icons/fa';
 
-const AdminNavbar = () => {
+const AdminSidebar = () => {
     return (
         <div className="bg-gray-900 text-white w-64 h-screen fixed">
             {/* Header */}
@@ -73,4 +73,4 @@ const AdminNavbar = () => {
 };
 
 
-export default AdminNavbar;
+export default AdminSidebar;

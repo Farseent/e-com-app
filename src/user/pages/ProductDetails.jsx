@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
-// import { useUser } from "../../context/UserContext";
 import { useCart } from "../../context/CartContext";
+import { getProductbyId } from "../../api/productApi";
 
 const ProductDetails = () => {
   const { id } = useParams(); // Get product ID from URL
@@ -15,12 +14,12 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/products/${id}`);
-        setProduct(response.data);
-        setLoading(false);
+        const response = await getProductbyId(id); // Use the function from ProductApi.js
+        setProduct(response.data); // Set the product data
       } catch (err) {
         console.error("Error fetching product details:", err);
         setError("Failed to load product details.");
+      } finally {
         setLoading(false);
       }
     };

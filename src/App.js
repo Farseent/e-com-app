@@ -1,16 +1,13 @@
 import { Routes,Route} from 'react-router-dom';
-import { UserProvider } from './context/UserContext';
-import AdminRouter from './admin/AdminRouter';
-import UserRouter from './user/UserRouter';
+import UserRouter from './user/routes/UserRouter';
+import AdminRouter from './admin/routes/AdminRouter';
 
 function App() {
   return (
-    <UserProvider>
-          <Routes>
-            <Route path="/*" element = { <UserRouter/> } />
-            <Route path="/admin*" element = { <AdminRouter/> } />
-          </Routes>
-   </UserProvider>
+      <Routes>
+        <Route path="/*" element = { <UserRouter/> } />
+        <Route path="/admin*" element = { <AdminRouter/> } />
+      </Routes>
   );
 }
 

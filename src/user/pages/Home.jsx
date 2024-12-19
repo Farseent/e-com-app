@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
+import { getAllProduct } from "../../api/productApi";
 
 
 const Home = () => {
@@ -12,8 +13,8 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/products");
-        setProducts(response.data);
+        const response = await getAllProduct(); // Use the function from ProductApi.js
+        setProducts(response.data); // Response contains the products
       } catch (error) {
         console.error("Failed to fetch products: ", error);
         setError("Error fetching product details");
@@ -33,8 +34,8 @@ const Home = () => {
             products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-lg shadow-md p-4 relative  hover:shadow-xl transform transition duration-300 hover:scale-105"
-              >
+                className="bg-white bg-opacity-90 rounded-lg shadow-lg p-4 relative transform transition duration-300 hover:shadow-xl hover:scale-105"
+                >
                 {product.image?(
                 <Link
                   to={`/product-details/${product.id}`}
@@ -56,7 +57,7 @@ const Home = () => {
                   <h3 className="text-lg font-semibold text-gray-700">{product.name}</h3>
                   <p className="text-gray-500">₹{product.price}</p>
                   <button
-                    className="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition"
+                    className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition"
                     onClick={(e) => {
                       e.preventDefault();
                       addToCart(product); 

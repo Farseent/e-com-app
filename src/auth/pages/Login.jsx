@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useUser } from "../context/UserContext";
+import { useUser } from "../../context/UserContext";
 
 const Login = () => {
   const { handleLogin } = useUser(); // Use handleLogin for logging in
