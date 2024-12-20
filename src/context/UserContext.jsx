@@ -5,15 +5,11 @@ import { useNavigate } from "react-router-dom";
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [email, setEmail] = useState(() => localStorage.getItem("email") || "");
-  const [name, setName] = useState(() => localStorage.getItem("name") || "");
-  const [role, setRole] = useState(() => localStorage.getItem("role") || "");
-
   const [user,setUser] = useState();
   const navigate = useNavigate();
 
-
   const handleSignup = async(userData) => {
+    try {
       const isEmail = await emailCheck(userData.email)
       if(!isEmail){ 
         const user = await addUser(userData);
@@ -24,9 +20,13 @@ export const UserProvider = ({ children }) => {
         return "";
       }
       else return "User already exist!"
+    } catch (error) {
+      console.error("Signup error:", error);
+      return "An error occurred during signup.";
+    }
+      
   };
 
-  // Handle Login
   const handleLogin = async(email,password) => {
 
     try {
@@ -46,24 +46,20 @@ export const UserProvider = ({ children }) => {
       }
     } catch (error) {
       console.error('login error:',error);
+      return "An error occurred during login.";
     }
   };
 
-  // Handle Logout
   const handleLogout = () => {
-    localStorage.removeItem("email");
-    localStorage.removeItem("name");
-    localStorage.removeItem("role");
-    setEmail("");
-    setName("");
-    setRole("");
+    setUser([]);
+    localStorage.clear();
+    navigate("/login");
   };
 
   return (
     <UserContext.Provider
       value={{
-        email,
-        role,
+        user,
         handleLogin,
         handleLogout,
         handleSignup
