@@ -19,7 +19,7 @@ export const UserProvider = ({ children }) => {
   // Handle Logout
   const handleLogout = () => {
     localStorage.removeItem("email");
-    localStorage.removeItem("name");
+    localStorage.removeItem("name"); 
     setEmail("");
     setName("");
   };

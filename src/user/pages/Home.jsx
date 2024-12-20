@@ -13,8 +13,8 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await getAllProduct(); // Use the function from ProductApi.js
-        setProducts(response.data); // Response contains the products
+        const response = await getAllProduct();
+        setProducts(response.data);
       } catch (error) {
         console.error("Failed to fetch products: ", error);
         setError("Error fetching product details");

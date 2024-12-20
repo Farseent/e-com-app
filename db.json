@@ -1,4 +1,24 @@
 {
+  "users": [
+    {
+      "id": "61fb",
+      "name": "Farseen ",
+      "email": "farseen247@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "450c",
+      "name": "Example",
+      "email": "example@mail.com",
+      "password": "example"
+    },
+    {
+      "id": "180f",
+      "name": "Name",
+      "email": "name@example.com",
+      "password": "name"
+    }
+  ],
   "products": [
     {
       "id": "1",
@@ -104,26 +124,6 @@
       "price": 42999,
       "image": "https://dakauf.eu/wp-content/uploads/2022/10/iPhoneSE_2022_midn.jpg",
       "description": "4GB RAM + 64GB Storage | 4.7-inch Retina HD Display | IP67 Water & Dust Resistance | A15 Bionic Chip | 12MP Rear Camera | 2227mAh Battery | 18W Fast Charging"
-    }
-  ],
-  "users": [
-    {
-      "id": "61fb",
-      "name": "Farseen ",
-      "email": "farseen247@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "450c",
-      "name": "Example",
-      "email": "example@mail.com",
-      "password": "example"
-    },
-    {
-      "id": "180f",
-      "name": "Name",
-      "email": "name@example.com",
-      "password": "name"
     }
   ],
   "cart": [

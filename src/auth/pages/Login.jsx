@@ -55,7 +55,7 @@ const Login = () => {
           />
           <input
             type="password"
-            placeholder="Password"
+            placehol der="Password"
             name="password"
             className="font-serif mt-5 border py-2 w-[235px] outline-none pl-2"
             value={form.password}

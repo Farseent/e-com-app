@@ -11,23 +11,27 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 
-const UserRouter = () => {
-  return (
-    <div className="flex flex-col min-h-screen">
-        <Navbar/>
-            <div className="flex-grow">
-                <Routes>
-                    <Route path="/" element = { <Home/> } />
-                    <Route path="/login" element = { <Login/> } />
-                    <Route path="/Signup" element = { <Signup/> } />
-                    <Route path="/product-details/:id" element = { <ProductDetails/> } />
-                    <Route path="/cart" element = { <Cart/> } />
-                    <Route path="/checkout" element = { <Checkout/> } />
-                    <Route path="/orders" element = { <Orders/> } />
-                </Routes>
-            </div>
-      <Footer/>
-    </div>
-  )
-}
+// const UserRouter = () => {
+//   return (
+//     <div className="flex flex-col min-h-screen">
+//         <Navbar/>
+//             <div className="flex-grow">
+//                 <Routes>
+                    
+//                     <Route path="/cart" element = { <Cart/> } />
+//                     <Route path="/checkout" element = { <Checkout/> } />
+//                     <Route path="/orders" element = { <Orders/> } />
+//                 </Routes>
+//             </div>
+//       <Footer/>
+//     </div>
+//   )
+// }
+
+const UserRouter =[
+  {path:'/cart',element:<Cart/>},
+  {path:'/checkout',element:<Checkout/>},
+  {path:'/orders',element:<Orders/>}
+]
+
 export default UserRouter;
