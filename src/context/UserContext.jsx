@@ -28,21 +28,24 @@ export const UserProvider = ({ children }) => {
   };
 
   const handleLogin = async(email,password) => {
-
     try {
       const [userValidation] = await userCheck(email,password);
-      if (userValidation.role === "admin"){
-        setUser(userValidation)
-        localStorage.setItem("admin",userValidation.email)
-        navigate('/admin');
-        return "";
-      }
-      else{
-        setUser(userValidation)
-        localStorage.setItem("user",userValidation.email);
-        localStorage.setItem("userId",userValidation.id);
-        navigate('/');
-        return "";
+      if(userValidation){
+          if (userValidation.role === "admin"){
+            setUser(userValidation)
+            localStorage.setItem("admin",userValidation.email)
+            navigate('/admin');
+            return "";
+          }
+          else{
+            setUser(userValidation)
+            localStorage.setItem("user",userValidation.email);
+            localStorage.setItem("userId",userValidation.id);
+            navigate('/');
+            return "";
+          }
+      }else{
+        return "Invalid email or password"
       }
     } catch (error) {
       console.error('login error:',error);

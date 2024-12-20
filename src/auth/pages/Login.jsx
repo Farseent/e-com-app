@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { useUser } from "../../context/UserContext";
 
 const Login = () => {
@@ -16,26 +15,14 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-      
-    //   const { data } = await axios.get("http://localhost:5000/users", {
-    //     params: { email: form.email, password: form.password },
-    //   });
-
-    //   if (data.length > 0) {
-    //     const userEmail = data[0].email;
-    //     const userName = data[0].name;
-    //     const userRole = data[0].role;
-
-        handleLogin(form.email,form.password); // Pass both email and name to handleLogin
-    //     navigate("/"); // Redirect to the home page
-    //   } else {
-    //     setMessage("Invalid email or password");
-    //   }
-    // } catch (error) {
-    //   console.error("Login Error:", error);
-    //   setMessage("An error occurred");
-    // }
+    try {
+      const response = await handleLogin(form.email,form.password);
+      setMessage(response)
+    } catch (error) {
+      console.error("Login Error:", error);
+      setMessage("An unexpected error occurred. Please try again.");
+    }
+    
   };
 
   return (
