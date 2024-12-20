@@ -18,6 +18,20 @@
       "name": "Name",
       "email": "name@example.com",
       "password": "name"
+    },
+    {
+      "id": "4e4b",
+      "name": "df",
+      "email": "as@gmail.com",
+      "password": "456456",
+      "role": "user"
+    },
+    {
+      "id": "331a",
+      "name": "df",
+      "email": "afasf@gmail.com",
+      "password": "6546",
+      "role": "user"
     }
   ],
   "products": [

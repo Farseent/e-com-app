@@ -2,10 +2,6 @@ import axios from "axios";
 
 const UserURL = "http://localhost:5000/users";
 
-// export const getAllUsers = () =>{
-//     return axios.get(UserURL);
-// }
-
 
 export const userCheck = async (email,password) => {
     const res = await axios.get(`${UserURL}?email=${email}&password=${password}`);
@@ -13,5 +9,9 @@ export const userCheck = async (email,password) => {
 }
 export const emailCheck = async (email) => {
     const res = await axios.get(`${UserURL}?email=${email}`);
+    return res.data.length>0;
+}
+export const addUser = async (userData) => {
+    const res = await axios.post(UserURL,userData);
     return res.data;
 }

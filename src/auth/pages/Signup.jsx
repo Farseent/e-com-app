@@ -1,13 +1,12 @@
-import axios from "axios";
 import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 
 const Signup = () => {
-  const navigate = useNavigate();
-  const { handleLogin } = useUser(); // Access handleLogin from context
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
-  const [message, setMessage] = useState("");
+  // const navigate = useNavigate();
+  const [form, setForm] = useState({ name: "", email: "", password: "",role:"user" });
+  // const [message, setMessage] = useState("");
+  const {handleSignup} = useUser();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,33 +15,35 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      // Check if the user already exists
-      const { data } = await axios.get("http://localhost:5000/users", {
-        params: { email: form.email },
-      });
+    const message = await handleSignup(form);
+    if (message) alert(message);
+    // try {
+    //   // Check if the user already exists
+    //   const { data } = await axios.get("http://localhost:5000/users", {
+    //     params: { email: form.email },
+    //   });
 
-      if (data.length > 0) {
-        setMessage("User already exists");
-      } else {
-        // Register the new user
-        await axios.post("http://localhost:5000/users", form);
+    //   if (data.length > 0) {
+    //     setMessage("User already exists");
+    //   } else {
+    //     // Register the new user
+    //     await axios.post("http://localhost:5000/users", form);
 
-        // Log in the user and redirect to Home
-        handleLogin(form.email, form.name); // Pass email and name to the context
-        navigate("/"); // Redirect to home page
-      }
-    } catch (error) {
-      console.error("Signup Error:", error);
-      setMessage("An error occurred during signup. Please try again.");
-    }
+    //     // Log in the user and redirect to Home
+    //     handleLogin(form.email, form.name); // Pass email and name to the context
+    //     navigate("/"); // Redirect to home page
+    //   }
+    // } catch (error) {
+    //   console.error("Signup Error:", error);
+    //   setMessage("An error occurred during signup. Please try again.");
+    // }
   };
 
   return (
     <div className="flex justify-center h-screen w-screen items-center">
       <div className="flex flex-col items-center w-[350px] h-auto rounded-lg p-4 border shadow-lg">
         <h1 className="font-bold text-3xl mt-5 mb-5 font-serif">SignUp</h1>
-        {message && <p className="mt-4 text-red-500">{message}</p>}
+        {/* {message && <p className="mt-4 text-red-500">{message}</p>} */}
         <form className="p-6 w-80" onSubmit={handleSubmit}>
           <input
             type="text"
