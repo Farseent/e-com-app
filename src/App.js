@@ -9,13 +9,15 @@ import UserProtectedRoutes from './user/routes/UserProtectedRoutes';
 import AdminProtectedRoutes from './admin/routes/AdminProtectedRoutes';
 import AdminSidebar from './admin/pages/AdminSidebar';
 import Navbar from './components/Navbar';
+import { Notfound } from './components/Notfound';
 
 function App() {
-  const location = useLocation;
-  const isAdmin = AdminRouter.some(route => location.pathname.startsWith(route.path));
+  // const location = useLocation;
+  // const isAdmin = AdminRouter.some(route => location.pathname.startsWith(route.path));
   return (
     <div>
-      {isAdmin ? <AdminSidebar/> : <Navbar/>}
+      {/* {isAdmin ? <AdminSidebar/> : <Navbar/>} */}
+      <Navbar/>
         <Routes>
           <Route path="/" element = { <Home/> } />
           <Route path="/login" element = { <Login/> } />
@@ -31,6 +33,7 @@ function App() {
                 <Route key={index} path={path} element={element}/>
               ))}
             </Route>
+            <Route path='*' element={<Notfound/>} />
         </Routes>
       </div>
   );

@@ -16,26 +16,26 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      // Send login request to the server
-      const { data } = await axios.get("http://localhost:5000/users", {
-        params: { email: form.email, password: form.password },
-      });
+    // try {
+      
+    //   const { data } = await axios.get("http://localhost:5000/users", {
+    //     params: { email: form.email, password: form.password },
+    //   });
 
-      if (data.length > 0) {
-        // Assuming the API returns the user's email and name
-        const userEmail = data[0].email;
-        const userName = data[0].name;
+    //   if (data.length > 0) {
+    //     const userEmail = data[0].email;
+    //     const userName = data[0].name;
+    //     const userRole = data[0].role;
 
-        handleLogin(userEmail, userName); // Pass both email and name to handleLogin
-        navigate("/"); // Redirect to the home page
-      } else {
-        setMessage("Invalid email or password");
-      }
-    } catch (error) {
-      console.error("Login Error:", error);
-      setMessage("An error occurred");
-    }
+        handleLogin(form.email,form.password); // Pass both email and name to handleLogin
+    //     navigate("/"); // Redirect to the home page
+    //   } else {
+    //     setMessage("Invalid email or password");
+    //   }
+    // } catch (error) {
+    //   console.error("Login Error:", error);
+    //   setMessage("An error occurred");
+    // }
   };
 
   return (
@@ -55,7 +55,7 @@ const Login = () => {
           />
           <input
             type="password"
-            placehol der="Password"
+            placeholder="Password"
             name="password"
             className="font-serif mt-5 border py-2 w-[235px] outline-none pl-2"
             value={form.password}

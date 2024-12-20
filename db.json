@@ -10,7 +10,8 @@
       "id": "450c",
       "name": "Example",
       "email": "example@mail.com",
-      "password": "example"
+      "password": "example",
+      "role": "admin"
     },
     {
       "id": "180f",
@@ -141,6 +142,14 @@
       "price": 99999,
       "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a__WWEN.jpg?v=1692348972",
       "description": "6GB RAM + 128GB Storage | 6.1-inch Super Retina XDR Display | IP68 Water & Dust Resistance | A15 Bionic Chip | 12MP Dual Rear Cameras | 20-Hour Video Playback | Fast Charging Support",
+      "email": "example@mail.com"
+    },
+    {
+      "id": "3",
+      "name": "Google Pixel 8",
+      "price": 74999,
+      "image": "https://virtual2web.com/12161-superlarge_default/google-pixel-8-pro-5g-12gb-128gb-blanco-porcelain-dual-sim-ga04798.jpg",
+      "description": "8GB RAM + 128GB Storage | 6.2-inch OLED Display | IP68 Water & Dust Resistance | Google Tensor G3 Chip | 50MP Dual Rear Cameras | 4000mAh Battery | 30W Fast Charging",
       "email": "example@mail.com"
     }
   ]
