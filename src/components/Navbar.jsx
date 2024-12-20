@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 
 const Navbar = () => {
-  const { email, handleLogout, name } = useUser();
+  const { user , handleLogout } = useUser();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [cartCount] = useState(2);
@@ -47,14 +47,6 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-            {/* <NavLink
-              to="/cart"
-              className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "hover:text-yellow-300"
-              }
-            >
-              Cart
-            </NavLink> */}
             <NavLink
               to="/orders"
               className={({ isActive }) =>
@@ -77,7 +69,7 @@ const Navbar = () => {
             </NavLink>
 
             {/* User Dropdown */}
-            {email ? (
+            {user ? (
               <div className="relative">
                 {/* User Dropdown Trigger */}
                 <button
@@ -85,7 +77,7 @@ const Navbar = () => {
                   className="flex items-center bg-blue-600 px-4 py-2 rounded-full text-white hover:bg-blue-700 focus:outline-none"
                 >
                   <FiUser className="mr-2" />
-                  {name || email.split("@")[0]}
+                  {user.name}
                 </button>
                 {/* Dropdown Menu */}
                 {isDropdownOpen && (
@@ -159,7 +151,7 @@ const Navbar = () => {
             >
               Orders
             </NavLink>
-            {email ? (
+            {user ? (
               <button
                 onClick={() => {
                   handleLogout();
