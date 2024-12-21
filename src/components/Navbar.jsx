@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <div>
       {/* Main navbar container */}
       <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -172,7 +172,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

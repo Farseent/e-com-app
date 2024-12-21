@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { addUser, emailCheck, userCheck } from "../api/userApi";
 import { useNavigate } from "react-router-dom";
 
@@ -8,14 +8,22 @@ export const UserProvider = ({ children }) => {
   const [user,setUser] = useState();
   const navigate = useNavigate();
 
+  // useEffect(() => {
+  //   const storedEmail = localStorage.getItem("user");
+  //   const storedUserId = localStorage.getItem("userId");
+  //   if (storedEmail) {
+  //     setUser({ email: storedEmail, id: storedUserId });
+  //   }
+  // }, []);
+
   const handleSignup = async(userData) => {
     try {
       const isEmail = await emailCheck(userData.email)
       if(!isEmail){ 
-        const user = await addUser(userData);
-        setUser(user);
-        localStorage.setItem("user",user.email);
-        localStorage.setItem("userId",user.id);
+        const newUser = await addUser(userData);
+        setUser(newUser);
+        localStorage.setItem("user",newUser.email);
+        localStorage.setItem("userId",newUser.id);
         navigate('/');
         return "";
       }
@@ -73,5 +81,4 @@ export const UserProvider = ({ children }) => {
   );
 };
 
-// Custom hook for ease of use
 export const useUser  = () => useContext(UserContext);

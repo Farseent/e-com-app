@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import { getAllProduct } from "../../api/productApi";
-
 
 const Home = () => {
   const [products, setProducts] = useState([]);
