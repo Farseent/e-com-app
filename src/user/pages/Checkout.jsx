@@ -36,28 +36,8 @@ const Checkout = () => {
       return;
     } 
 
-    // const orderDetails = {
-    //   user, // Get from UserContext
-    //   items: cart.map((item) => ({
-    //     id: item.id,
-    //     name: item.name,
-    //     quantity: item.quantity,
-    //     price: item.price,
-    //   })),
-    //   total: getTotalPrice(),
-    //   paymentMethod: selectedPayment,
-    //   address: address,
-    //   date: new Date().toISOString(),
-    // };
-
     try {
-      // const response = await fetch("http://localhost:5001/orders", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(orderDetails),
-      // });
+     
       const orderDetials = {
         userId,
         items: cart,
