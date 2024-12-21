@@ -12,7 +12,8 @@
       "name": "Name",
       "email": "name@example.com",
       "password": "name",
-      "role": "user"
+      "role": "user",
+      "cart": []
     },
     {
       "id": "65e2",
@@ -22,6 +23,38 @@
       "role": "user",
       "cart": [
         {
+          "id": "1",
+          "name": "iPhone 14 Pro",
+          "price": 99999,
+          "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a__WWEN.jpg?v=1692348972",
+          "description": "6GB RAM + 128GB Storage | 6.1-inch Super Retina XDR Display | IP68 Water & Dust Resistance | A15 Bionic Chip | 12MP Dual Rear Cameras | 20-Hour Video Playback | Fast Charging Support",
+          "qty": 1
+        },
+        {
+          "id": "2",
+          "name": "Samsung Galaxy S23",
+          "price": 79999,
+          "image": "https://m.media-amazon.com/images/I/51hqXIAVXAL.jpg",
+          "description": "8GB RAM + 128GB Storage | 6.1-inch Dynamic AMOLED 2X Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 3900mAh Battery | 25W Fast Charging",
+          "qty": 1
+        },
+        {
+          "id": "8",
+          "name": "Vivo X80 Pro",
+          "price": 79999,
+          "image": "https://s.alicdn.com/@sc04/kf/H249126385f5342c9805d2c26c1e99921t.jpg_720x720q50.jpg",
+          "description": "12GB RAM + 256GB Storage | 6.78-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 1 | 50MP Quad Rear Cameras | 4700mAh Battery | 80W Fast Charging",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "4029",
+      "userId": "180f",
+      "items": [
+        {
           "id": "3",
           "name": "Google Pixel 8",
           "price": 74999,
@@ -29,7 +62,17 @@
           "description": "8GB RAM + 128GB Storage | 6.2-inch OLED Display | IP68 Water & Dust Resistance | Google Tensor G3 Chip | 50MP Dual Rear Cameras | 4000mAh Battery | 30W Fast Charging",
           "qty": 1
         }
-      ]
+      ],
+      "total": 74999,
+      "paymentMethod": "PayPal",
+      "address": {
+        "street": "kj",
+        "city": "kj",
+        "state": "sfd",
+        "zip": "444",
+        "country": "\\]lk"
+      },
+      "date": "2024-12-21T15:57:24.434Z"
     }
   ],
   "products": [
