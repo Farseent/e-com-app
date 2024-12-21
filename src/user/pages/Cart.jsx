@@ -4,12 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 
 const Cart = () => {
-  const { cart, removeFromCart, clearCart, updateQuantity } = useCart();
+  const { cart, removeFromCart, clearCart, updateQuantity,totalPrice } = useCart();
   const navigate = useNavigate();
   const { user } = useUser();
 
-  const getTotalPrice = () =>
-    cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
   const handleCheckout = () => {
     navigate("/checkout");
@@ -47,7 +45,7 @@ const Cart = () => {
                         >
                           -
                         </button>
-                        <span className="text-lg font-semibold">{product.quantity}</span>
+                        <span className="text-sm">{product.qty}</span>
                         <button
                           onClick={() => updateQuantity(product.id, 1)}
                           className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
@@ -65,7 +63,7 @@ const Cart = () => {
                     </div>
                   ))}
                   <div className="mt-6 flex justify-between items-center">
-                    <h3 className="text-xl font-bold">Total: ₹{getTotalPrice()}</h3>
+                    <h3 className="text-xl font-bold">Total: ₹{totalPrice}</h3>
                     <div className="space-x-4">
                       <button
                         onClick={clearCart}

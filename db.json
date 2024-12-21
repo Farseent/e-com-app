@@ -22,14 +22,6 @@
       "role": "user",
       "cart": [
         {
-          "id": "2",
-          "name": "Samsung Galaxy S23",
-          "price": 79999,
-          "image": "https://m.media-amazon.com/images/I/51hqXIAVXAL.jpg",
-          "description": "8GB RAM + 128GB Storage | 6.1-inch Dynamic AMOLED 2X Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 3900mAh Battery | 25W Fast Charging",
-          "qty": 1
-        },
-        {
           "id": "3",
           "name": "Google Pixel 8",
           "price": 74999,

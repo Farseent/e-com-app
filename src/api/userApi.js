@@ -21,4 +21,5 @@ export const addUser = async (userData) => {
 
 export const getUserbyId = async (userId) => {
     const res = await axios.get(`${UserURL}/${userId}`)
+    return res.data;
 }

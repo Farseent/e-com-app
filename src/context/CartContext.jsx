@@ -73,9 +73,10 @@ export const CartProvider = ({ children }) => {
   };
 
   const updateQuantity = (productId, amount) => {
-    const updatedCart = cart.map((item) =>
-      item.id === productId ? { ...item, qty: item.qty + amount } : item
-    );
+    const updatedCart = cart.map(item =>
+      item.id === productId ? { ...item, qty:  Math.max(1, item.qty + amount) } : item
+    )
+    .filter(item => item.qty > 0);
     updateServerCart(updatedCart);
   };
 
