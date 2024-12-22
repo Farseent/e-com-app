@@ -3,7 +3,7 @@ import { getAllUsers } from '../../api/adminApi';
 
 const ManageUsers = () => {
     const [users, setUsers] = useState([]);
-    // const [userForm, setUserForm] = useState({ id: '', name: '', email: '', role: '', status: '' });
+    const [userForm, setUserForm] = useState({ id: '', name: '', email: '', role: '', status: '' });
 
     useEffect(() => {
         getAllUsers().then((res) => setUsers(res.data));
