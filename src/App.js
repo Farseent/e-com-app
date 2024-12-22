@@ -16,8 +16,9 @@ function App() {
   const location = useLocation();
   const isAdmin = AdminRouter.some(route=>location.pathname.startsWith(route.path));
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       {isAdmin ? <AdminSidebar/> : <Navbar/>}
+      <div className="flex-grow">
         <Routes>
           <Route path="/" element = { <Home/> } />
           <Route path="/login" element = { <Login/> } />
@@ -35,6 +36,7 @@ function App() {
             </Route>
             <Route path='*' element={<Notfound/>} />
         </Routes>
+        </div>
         <Footer/>
       </div>
   );

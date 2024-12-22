@@ -42,7 +42,7 @@ const ManageProducts = () => {
 
     return (
         <div className="container mx-auto p-6">
-            <h1 className="text-3xl font-extrabold text-gray-700 mb-6 text-center">Manage Products</h1>
+            <h1 className="text-2xl font-bold mb-6">Manage Products</h1>
 
             {/* Add New Product Form */}
             <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 mb-8">

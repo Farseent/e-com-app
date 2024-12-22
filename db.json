@@ -14,24 +14,7 @@
       "email": "farseen247@gmail.com",
       "password": "1234",
       "role": "user",
-      "cart": [
-        {
-          "id": "2",
-          "name": "Samsung Galaxy S23",
-          "price": 79999,
-          "image": "https://m.media-amazon.com/images/I/51hqXIAVXAL.jpg",
-          "description": "8GB RAM + 128GB Storage | 6.1-inch Dynamic AMOLED 2X Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 3900mAh Battery | 25W Fast Charging",
-          "qty": 1
-        },
-        {
-          "id": "3",
-          "name": "Google Pixel 8",
-          "price": 74999,
-          "image": "https://virtual2web.com/12161-superlarge_default/google-pixel-8-pro-5g-12gb-128gb-blanco-porcelain-dual-sim-ga04798.jpg",
-          "description": "8GB RAM + 128GB Storage | 6.2-inch OLED Display | IP68 Water & Dust Resistance | Google Tensor G3 Chip | 50MP Dual Rear Cameras | 4000mAh Battery | 30W Fast Charging",
-          "qty": 1
-        }
-      ]
+      "cart": []
     },
     {
       "id": "12cf",
@@ -39,168 +22,40 @@
       "email": "admin@gmail.com",
       "password": "admin",
       "role": "admin"
+    },
+    {
+      "id": "1c2e",
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "1234",
+      "role": "user"
     }
   ],
   "orders": [
     {
-      "id": "4029",
-      "userId": "180f",
+      "id": "4c84",
+      "userId": "65e2",
+      "userName": "Farseen ",
       "items": [
         {
-          "id": "3",
-          "name": "Google Pixel 8",
-          "price": 74999,
-          "image": "https://virtual2web.com/12161-superlarge_default/google-pixel-8-pro-5g-12gb-128gb-blanco-porcelain-dual-sim-ga04798.jpg",
-          "description": "8GB RAM + 128GB Storage | 6.2-inch OLED Display | IP68 Water & Dust Resistance | Google Tensor G3 Chip | 50MP Dual Rear Cameras | 4000mAh Battery | 30W Fast Charging",
+          "id": "1",
+          "name": "iPhone 14 Pro",
+          "price": 99999,
+          "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a__WWEN.jpg?v=1692348972",
+          "description": "6GB RAM + 128GB Storage | 6.1-inch Super Retina XDR Display | IP68 Water & Dust Resistance | A15 Bionic Chip | 12MP Dual Rear Cameras | 20-Hour Video Playback | Fast Charging Support",
           "qty": 1
         }
       ],
-      "total": 74999,
+      "total": 99999,
       "paymentMethod": "PayPal",
       "address": {
-        "street": "kj",
-        "city": "kj",
-        "state": "sfd",
-        "zip": "444",
-        "country": "\\]lk"
+        "street": "gsg",
+        "city": "sdfg",
+        "state": "sdfg",
+        "zip": "sdfg",
+        "country": "dfg"
       },
-      "date": "2024-12-21T15:57:24.434Z"
-    },
-    {
-      "id": "200f",
-      "userId": "180f",
-      "items": [
-        {
-          "id": "3",
-          "name": "Google Pixel 8",
-          "price": 74999,
-          "image": "https://virtual2web.com/12161-superlarge_default/google-pixel-8-pro-5g-12gb-128gb-blanco-porcelain-dual-sim-ga04798.jpg",
-          "description": "8GB RAM + 128GB Storage | 6.2-inch OLED Display | IP68 Water & Dust Resistance | Google Tensor G3 Chip | 50MP Dual Rear Cameras | 4000mAh Battery | 30W Fast Charging",
-          "qty": 1
-        },
-        {
-          "id": "1",
-          "name": "iPhone 14 Pro",
-          "price": 99999,
-          "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a__WWEN.jpg?v=1692348972",
-          "description": "6GB RAM + 128GB Storage | 6.1-inch Super Retina XDR Display | IP68 Water & Dust Resistance | A15 Bionic Chip | 12MP Dual Rear Cameras | 20-Hour Video Playback | Fast Charging Support",
-          "qty": 1
-        }
-      ],
-      "total": 174998,
-      "paymentMethod": "Credit Card",
-      "address": {
-        "street": "ert",
-        "city": "s",
-        "state": "sfd",
-        "zip": "444",
-        "country": "\\]lk"
-      },
-      "date": "2024-12-21T16:53:10.900Z"
-    },
-    {
-      "id": "bc3c",
-      "userId": "180f",
-      "items": [
-        {
-          "id": "1",
-          "name": "iPhone 14 Pro",
-          "price": 99999,
-          "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a__WWEN.jpg?v=1692348972",
-          "description": "6GB RAM + 128GB Storage | 6.1-inch Super Retina XDR Display | IP68 Water & Dust Resistance | A15 Bionic Chip | 12MP Dual Rear Cameras | 20-Hour Video Playback | Fast Charging Support",
-          "qty": 2
-        },
-        {
-          "id": "2",
-          "name": "Samsung Galaxy S23",
-          "price": 79999,
-          "image": "https://m.media-amazon.com/images/I/51hqXIAVXAL.jpg",
-          "description": "8GB RAM + 128GB Storage | 6.1-inch Dynamic AMOLED 2X Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 3900mAh Battery | 25W Fast Charging",
-          "qty": 2
-        }
-      ],
-      "total": 359996,
-      "paymentMethod": "Credit Card",
-      "address": {
-        "street": "kj",
-        "city": "s",
-        "state": "sfd",
-        "zip": "444",
-        "country": "\\]lk"
-      },
-      "date": "2024-12-21T17:24:34.623Z"
-    },
-    {
-      "id": "bed7",
-      "userId": "65e2",
-      "items": [
-        {
-          "id": "1",
-          "name": "iPhone 14 Pro",
-          "price": 99999,
-          "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a__WWEN.jpg?v=1692348972",
-          "description": "6GB RAM + 128GB Storage | 6.1-inch Super Retina XDR Display | IP68 Water & Dust Resistance | A15 Bionic Chip | 12MP Dual Rear Cameras | 20-Hour Video Playback | Fast Charging Support",
-          "qty": 1
-        },
-        {
-          "id": "2",
-          "name": "Samsung Galaxy S23",
-          "price": 79999,
-          "image": "https://m.media-amazon.com/images/I/51hqXIAVXAL.jpg",
-          "description": "8GB RAM + 128GB Storage | 6.1-inch Dynamic AMOLED 2X Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 3900mAh Battery | 25W Fast Charging",
-          "qty": 1
-        },
-        {
-          "id": "8",
-          "name": "Vivo X80 Pro",
-          "price": 79999,
-          "image": "https://s.alicdn.com/@sc04/kf/H249126385f5342c9805d2c26c1e99921t.jpg_720x720q50.jpg",
-          "description": "12GB RAM + 256GB Storage | 6.78-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 1 | 50MP Quad Rear Cameras | 4700mAh Battery | 80W Fast Charging",
-          "qty": 1
-        }
-      ],
-      "total": 259997,
-      "paymentMethod": "Cash on Delivery",
-      "address": {
-        "street": "kj",
-        "city": "gfh",
-        "state": "sgh",
-        "zip": "sgh",
-        "country": "gh"
-      },
-      "date": "2024-12-21T18:00:31.187Z"
-    },
-    {
-      "id": "dd27",
-      "userId": "65e2",
-      "items": [
-        {
-          "id": "7",
-          "name": "Realme GT 2 Pro",
-          "price": 57999,
-          "image": "https://images.jdmagicbox.com/quickquotes/images_main/gt-2-pro-ram-12-gb-256-gb-paper-green-271165723-mgz93q4t.png",
-          "description": "12GB RAM + 256GB Storage | 6.7-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 1 | 50MP Triple Rear Cameras | 5000mAh Battery | 65W Fast Charging",
-          "qty": 2
-        },
-        {
-          "id": "8",
-          "name": "Vivo X80 Pro",
-          "price": 79999,
-          "image": "https://s.alicdn.com/@sc04/kf/H249126385f5342c9805d2c26c1e99921t.jpg_720x720q50.jpg",
-          "description": "12GB RAM + 256GB Storage | 6.78-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 1 | 50MP Quad Rear Cameras | 4700mAh Battery | 80W Fast Charging",
-          "qty": 1
-        }
-      ],
-      "total": 195997,
-      "paymentMethod": "Credit Card",
-      "address": {
-        "street": "kj",
-        "city": "gfh",
-        "state": "k",
-        "zip": "jhg",
-        "country": "\\]lk"
-      },
-      "date": "2024-12-21T18:03:02.964Z"
+      "date": "2024-12-22T14:45:31.695Z"
     }
   ],
   "products": [

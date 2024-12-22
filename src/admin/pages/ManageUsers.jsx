@@ -1,45 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
-// Mock API calls for demonstration purposes
-const fetchUsers = () => {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve([
-                { id: 1, name: 'John Doe', email: 'john.doe@example.com', role: 'User', status: 'Active' },
-                { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com', role: 'Admin', status: 'Inactive' },
-                { id: 3, name: 'Sam Brown', email: 'sam.brown@example.com', role: 'User', status: 'Active' },
-            ]);
-        }, 1000);
-    });
-};
+import { getAllUsers } from '../../api/adminApi';
 
 const ManageUsers = () => {
     const [users, setUsers] = useState([]);
-    const [userForm, setUserForm] = useState({ id: '', name: '', email: '', role: '', status: '' });
+    // const [userForm, setUserForm] = useState({ id: '', name: '', email: '', role: '', status: '' });
 
-    // Fetch users when the component mounts
     useEffect(() => {
-        fetchUsers().then(fetchedUsers => {
-            setUsers(fetchedUsers);
-        });
+        getAllUsers().then((res) => setUsers(res.data));
     }, []);
-
-    const handleEditUser = (id) => {
-        const user = users.find(u => u.id === id);
-        setUserForm(user);
-    };
-
-    const handleUpdateUser = () => {
-        const updatedUsers = users.map(user =>
-            user.id === userForm.id ? { ...user, ...userForm } : user
-        );
-        setUsers(updatedUsers);
-        setUserForm({ id: '', name: '', email: '', role: '', status: '' }); // Reset the form
-    };
-
-    const handleDeleteUser = (id) => {
-        setUsers(users.filter(user => user.id !== id));
-    };
 
     return (
         <div className="container mx-auto p-4">
@@ -54,19 +22,19 @@ const ManageUsers = () => {
                         className="p-2 border rounded-md"
                         placeholder="Name"
                         value={userForm.name}
-                        onChange={(e) => setUserForm({ ...userForm, name: e.target.value })}
+                        // onChange={(e) => setUserForm({ ...userForm, name: e.target.value })}
                     />
                     <input
                         type="email"
                         className="p-2 border rounded-md"
                         placeholder="Email"
                         value={userForm.email}
-                        onChange={(e) => setUserForm({ ...userForm, email: e.target.value })}
+                        // onChange={(e) => setUserForm({ ...userForm, email: e.target.value })}
                     />
                     <select
                         className="p-2 border rounded-md"
                         value={userForm.role}
-                        onChange={(e) => setUserForm({ ...userForm, role: e.target.value })}
+                        // onChange={(e) => setUserForm({ ...userForm, role: e.target.value })}
                     >
                         <option value="">Select Role</option>
                         <option value="User">User</option>
@@ -75,7 +43,7 @@ const ManageUsers = () => {
                     <select
                         className="p-2 border rounded-md"
                         value={userForm.status}
-                        onChange={(e) => setUserForm({ ...userForm, status: e.target.value })}
+                        // onChange={(e) => setUserForm({ ...userForm, status: e.target.value })}
                     >
                         <option value="">Select Status</option>
                         <option value="Active">Active</option>
@@ -83,7 +51,7 @@ const ManageUsers = () => {
                     </select>
                 </div>
                 <button
-                    onClick={handleUpdateUser}
+                    // onClick={handleUpdateUser}
                     className="mt-4 bg-blue-600 text-white p-2 rounded-md"
                 >
                     Update User
@@ -112,13 +80,13 @@ const ManageUsers = () => {
                                 <td className="px-4 py-2">{user.status}</td>
                                 <td className="px-4 py-2">
                                     <button
-                                        onClick={() => handleEditUser(user.id)}
+                                        // onClick={() => handleEditUser(user.id)}
                                         className="bg-blue-600 text-white p-2 rounded-md mr-2"
                                     >
                                         Edit
                                     </button>
                                     <button
-                                        onClick={() => handleDeleteUser(user.id)}
+                                        // onClick={() => handleDeleteUser(user.id)}
                                         className="bg-red-600 text-white p-2 rounded-md"
                                     >
                                         Delete

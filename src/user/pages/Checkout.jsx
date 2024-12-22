@@ -11,6 +11,7 @@ const Checkout = () => {
   const navigate = useNavigate();
   const [selectedPayment, setSelectedPayment] = useState("");
   const userId = localStorage.getItem("userId");
+  const userName = localStorage.getItem("userName");
 
   const [address, setAddress] = useState({ street: "", city: "", state: "", zip: "", country: ""})
 
@@ -40,6 +41,7 @@ const Checkout = () => {
      
       const orderDetials = {
         userId,
+        userName,
         items: cart,
         total: totalPrice,
         paymentMethod: selectedPayment,
