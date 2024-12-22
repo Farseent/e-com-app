@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import { useUser } from "../context/UserContext";
+import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
-  const { user , handleLogout } = useUser();
+  const { handleLogout } = useUser();
+  const {cart} = useCart();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [cartCount] = useState(2);
+  const [cartCount] = useState();
   const useName = localStorage.getItem("userName");
 
   const toggleDropdown = () => {
@@ -62,9 +64,9 @@ const Navbar = () => {
           <div className="hidden md:flex justify-end items-center space-x-4 px-2">
             <NavLink to="/cart" className="relative">
               <FiShoppingCart className="text-2xl text-white hover:text-yellow-300" />
-              {cartCount > 0 && (
+              {cart.length > 0 && (
                 <span className="absolute -top-2 -right-3 bg-yellow-400 text-black text-sm font-bold w-5 h-5 rounded-full flex justify-center items-center">
-                  {cartCount}
+                  {cart.length}
                 </span>
               )}
             </NavLink>
