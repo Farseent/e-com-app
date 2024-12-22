@@ -7,9 +7,10 @@ import Signup from './auth/pages/Signup';
 import ProductDetails from './user/pages/ProductDetails';
 import UserProtectedRoutes from './user/routes/UserProtectedRoutes';
 import AdminProtectedRoutes from './admin/routes/AdminProtectedRoutes';
-import AdminSidebar from './admin/pages/AdminSidebar';
+import AdminSidebar from './admin/pages/AdminNav';
 import Navbar from './components/Navbar';
 import { Notfound } from './components/Notfound';
+import Footer from './components/Footer';
 
 function App() {
   const location = useLocation();
@@ -34,6 +35,7 @@ function App() {
             </Route>
             <Route path='*' element={<Notfound/>} />
         </Routes>
+        <Footer/>
       </div>
   );
 }

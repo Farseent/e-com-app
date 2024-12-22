@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       {/* Main navbar container */}
       <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
