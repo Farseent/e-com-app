@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useUser } from "../../context/UserContext";
 import { OrdersByUserId } from "../../api/userApi";
 import { useCart } from "../../context/CartContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -70,7 +70,22 @@ const Orders = () => {
             </div>
           ))
       ) : (
-        <p>No orders found.</p>
+        <div className="flex flex-col items-center p-4">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/17568/17568958.png"
+            alt="Empty Cart"
+            className="w-64 h-64 object-contain mb-6"
+          />
+          <h2 className="text-2xl font-semibold text-gray-700">No Orders Found!</h2>
+          <p className="text-gray-500 mt-2 text-center max-w-md">
+            You haven’t placed any orders yet. Browse our catalog and order your favorite items today!                       </p>
+          <Link
+            to="/"
+            className="mt-6 px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-blue-700 transition-all"
+          >
+            Shop Now
+          </Link>
+        </div>
       )}
     </div>
   );
