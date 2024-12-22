@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [cartCount] = useState(2);
+  const useName = localStorage.getItem("userName");
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -69,7 +70,7 @@ const Navbar = () => {
             </NavLink>
 
             {/* User Dropdown */}
-            {user ? (
+            {useName ? (
               <div className="relative">
                 {/* User Dropdown Trigger */}
                 <button
@@ -77,7 +78,7 @@ const Navbar = () => {
                   className="flex items-center bg-blue-600 px-4 py-2 rounded-full text-white hover:bg-blue-700 focus:outline-none"
                 >
                   <FiUser className="mr-2" />
-                  {user.name}
+                  {useName}
                 </button>
                 {/* Dropdown Menu */}
                 {isDropdownOpen && (
@@ -151,7 +152,7 @@ const Navbar = () => {
             >
               Orders
             </NavLink>
-            {user ? (
+            {useName ? (
               <button
                 onClick={() => {
                   handleLogout();

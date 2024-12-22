@@ -25,7 +25,7 @@ import Reports from '../pages/Reports';
 const AdminRouter = [
   {path:'/admin', element:<Dashboard/>},
   {path:'/admin/manageproduct', element:<ManageProducts/>},
-  {path:'/admin/manageprorders', element:<ManageOrders/>},
+  {path:'/admin/manageorders', element:<ManageOrders/>},
   {path:'/admin/manageusers', element:<ManageUsers/>},
   {path:'/admin/reports', element:<Reports/>}
 ]

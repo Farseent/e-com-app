@@ -49,6 +49,7 @@ export const UserProvider = ({ children }) => {
             setUser(userValidation)
             localStorage.setItem("user",userValidation.email);
             localStorage.setItem("userId",userValidation.id);
+            localStorage.setItem("userName",userValidation.name);
             navigate('/');
             return "";
           }

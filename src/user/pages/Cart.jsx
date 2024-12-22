@@ -1,19 +1,17 @@
 import React from "react";
 import { useCart } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom"; 
-import { useUser } from "../../context/UserContext";
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart, updateQuantity,totalPrice } = useCart();
   const navigate = useNavigate();
-  const { user } = useUser();
-
+  const userId = localStorage.getItem("userId");
 
   const handleCheckout = () => {
     navigate("/checkout");
   };
 
-  if (!user) return <p>Please log in to view your cart.</p>;
+  if (!userId) return <p>Please log in to view your cart.</p>;
 
   return (
       <div className="max-w-4xl mx-auto py-8 px-4">

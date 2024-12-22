@@ -12,12 +12,11 @@ import Navbar from './components/Navbar';
 import { Notfound } from './components/Notfound';
 
 function App() {
-  // const location = useLocation;
-  // const isAdmin = AdminRouter.some(route => location.pathname.startsWith(route.path));
+  const location = useLocation();
+  const isAdmin = AdminRouter.some(route=>location.pathname.startsWith(route.path));
   return (
     <div>
-      {/* {isAdmin ? <AdminSidebar/> : <Navbar/>} */}
-      <Navbar/>
+      {isAdmin ? <AdminSidebar/> : <Navbar/>}
         <Routes>
           <Route path="/" element = { <Home/> } />
           <Route path="/login" element = { <Login/> } />
