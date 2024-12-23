@@ -4,7 +4,7 @@ import { useUser } from "../../context/UserContext";
 
 const Signup = () => {
   // const navigate = useNavigate();
-  const [form, setForm] = useState({ name: "", email: "", password: "",role:"user" });
+  const [form, setForm] = useState({ name: "", email: "", password: "",role:"user",blocked:false });
   // const [message, setMessage] = useState("");
   const {handleSignup} = useUser();
 

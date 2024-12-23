@@ -6,7 +6,7 @@ import { getAllProduct } from "../../api/productApi";
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState("");
-  const { addToCart } = useCart(); 
+  const { addToCart } = useCart();  
 
   useEffect(() => {
     const fetchProducts = async () => {

@@ -6,6 +6,7 @@
       "email": "name@example.com",
       "password": "name",
       "role": "user",
+      "blocked": false,
       "cart": []
     },
     {
@@ -54,14 +55,33 @@
       "name": "Admin",
       "email": "admin@gmail.com",
       "password": "admin",
-      "role": "admin"
+      "role": "admin",
+      "blocked": false
     },
     {
       "id": "1c2e",
       "name": "test",
       "email": "test@gmail.com",
       "password": "1234",
-      "role": "user"
+      "role": "user",
+      "blocked": false
+    },
+    {
+      "id": "2e1a",
+      "name": "example",
+      "email": "example@gmail.com",
+      "password": "1234",
+      "role": "user",
+      "blocked": false,
+      "cart": []
+    },
+    {
+      "id": "659b",
+      "name": "hgfjh",
+      "email": "kjhg@gmail.com",
+      "password": "1234",
+      "role": "user",
+      "blocked": false
     }
   ],
   "orders": [
