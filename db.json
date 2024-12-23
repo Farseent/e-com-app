@@ -30,6 +30,22 @@
           "image": "https://virtual2web.com/12161-superlarge_default/google-pixel-8-pro-5g-12gb-128gb-blanco-porcelain-dual-sim-ga04798.jpg",
           "description": "8GB RAM + 128GB Storage | 6.2-inch OLED Display | IP68 Water & Dust Resistance | Google Tensor G3 Chip | 50MP Dual Rear Cameras | 4000mAh Battery | 30W Fast Charging",
           "qty": 1
+        },
+        {
+          "id": "4",
+          "name": "OnePlus 11",
+          "price": 54999,
+          "image": "https://oasis.opstatics.com/content/dam/oasis/page/2023/na/oneplus-11/specs/green-img.png",
+          "description": "12GB RAM + 256GB Storage | 6.7-inch Fluid AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 5000mAh Battery | 100W Fast Charging",
+          "qty": 1
+        },
+        {
+          "id": "1",
+          "name": "iPhone 14 Pro",
+          "price": 99999,
+          "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a__WWEN.jpg?v=1692348972",
+          "description": "6GB RAM + 128GB Storage | 6.1-inch Super Retina XDR Display | IP68 Water & Dust Resistance | A15 Bionic Chip | 12MP Dual Rear Cameras | 20-Hour Video Playback | Fast Charging Support",
+          "qty": 1
         }
       ]
     },
