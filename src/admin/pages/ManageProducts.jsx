@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getAllProduct } from '../../api/productApi';
 import { NavLink } from 'react-router-dom';
+import { deleteProduct } from '../../api/adminApi';
 
 
 const ManageProducts = () => {
@@ -10,6 +11,17 @@ const ManageProducts = () => {
     useEffect(() => {
         getAllProduct().then((res) => setProducts(res.data));
     }, []);
+
+    const handleDeleteProduct = (id) => {
+        if (window.confirm("Are you sure you want to delete this product?"))
+        {
+            deleteProduct(id).then((res) => {
+                if (res) alert("Product deleted successfully!");
+                else alert("Failed to delete product!");
+                setProducts(products.filter(product => product.id !== id));
+            });
+        }
+    }
 
 
     return (
@@ -44,11 +56,12 @@ const ManageProducts = () => {
                                         : product.description}
                                 </td>                                
                                 <td className="px-6 py-3">
-                                   <NavLink to={`/admin/editproduct/${product.id}`}><button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded transition duration-200 mr-2">Edit</button></NavLink>
-                                    <button /* onClick={() => handleDeleteProduct(product.id)}*/ className="bg-red-500 hover:bg-red-600 text-white font-semibold py-1 px-3 rounded transition duration-200">Delete</button></td>
+                                    <NavLink to={`/admin/editproduct/${product.id}`}><button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded transition duration-200 mr-2">Edit</button></NavLink>
+                                    <button  onClick={() => handleDeleteProduct(product.id)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-1 px-3 rounded transition duration-200">Delete</button>
+                                </td>
                             </tr>
                         ))}
-                    </tbody>
+                    </tbody>                            
                 </table>
             </div>
         </div>
