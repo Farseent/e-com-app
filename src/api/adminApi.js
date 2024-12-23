@@ -17,3 +17,7 @@ export const getAllOrders = async () => {
 export const addProduct = async (product) => {
     return await axios.post(ProductURL,product);
 }
+
+export const editProduct = async (id,product) => {
+    return await axios.put(`${ProductURL}/${id}`,product);
+}
