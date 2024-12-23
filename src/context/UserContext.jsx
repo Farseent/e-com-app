@@ -2,9 +2,9 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { addUser, emailCheck, userCheck } from "../api/userApi";
 import { useNavigate } from "react-router-dom";
 
-const UserContext = createContext();
+export const UserContext = createContext();
 
-export const UserProvider = ({ children }) => {
+export const UserProvider   = ({ children }) => {
   const [user,setUser] = useState();
   const navigate = useNavigate();
 

@@ -9,7 +9,6 @@ const Navbar = () => {
   const {cart} = useCart();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [cartCount] = useState();
   const useName = localStorage.getItem("userName");
 
   const toggleDropdown = () => {
@@ -67,7 +66,7 @@ const Navbar = () => {
               {cart.length > 0 && (
                 <span className="absolute -top-2 -right-3 bg-yellow-400 text-black text-sm font-bold w-5 h-5 rounded-full flex justify-center items-center">
                   {cart.length}
-                </span>
+                </span> 
               )}
             </NavLink>
 
