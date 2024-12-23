@@ -42,7 +42,8 @@ const ManageProducts = () => {
                                     {product.description.length > 50
                                         ? product.description.substring(0, 50) + "..."
                                         : product.description}
-                                </td>                                <td className="px-6 py-3">
+                                </td>                                
+                                <td className="px-6 py-3">
                                    <NavLink to={`/admin/editproduct/${product.id}`}><button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded transition duration-200 mr-2">Edit</button></NavLink>
                                     <button /* onClick={() => handleDeleteProduct(product.id)}*/ className="bg-red-500 hover:bg-red-600 text-white font-semibold py-1 px-3 rounded transition duration-200">Delete</button></td>
                             </tr>

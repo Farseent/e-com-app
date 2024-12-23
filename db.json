@@ -249,6 +249,13 @@
       "price": 42999,
       "image": "https://dakauf.eu/wp-content/uploads/2022/10/iPhoneSE_2022_midn.jpg",
       "description": "4GB RAM + 64GB Storage | 4.7-inch Retina HD Display | IP67 Water & Dust Resistance | A15 Bionic Chip | 12MP Rear Camera | 2227mAh Battery | 18W Fast Charging"
+    },
+    {
+      "id": "caea",
+      "name": "REDMAGIC 10 Pro",
+      "price": "89999",
+      "description": "144Hz Gaming Phone, 6.85\" FHD+, Under Display Camera, 7050mAh Android Phone, Snapdragon 8 Elite, 16+512GB, 80W Charger, Dual-Sim, Unlocked Phone Transparent",
+      "image": "https://m.media-amazon.com/images/I/61b+dH+cxOL._AC_SY445_.jpg"
     }
   ]
 }
