@@ -100,13 +100,13 @@ const Navbar = () => {
 
           {/* Search Bar */}
           <div className="relative flex items-center bg-white rounded-full px-2 py-1 md:w-1/2 w-2/3 max-w-sm focus-within:ring-2 focus-within:ring-blue-300">
-          <FiSearch className="text-gray-500 text-lg" />
+          <FiSearch className="text-gray-500 text-lg mr-2 " />
           <input
             id="search-input"
             onChange={(e) => setSearchTerm(e.target.value)}
             value={searchTerm}
             type="search"
-            placeholder=" Search..."
+            placeholder="Search..."
             className="bg-transparent w-[100%] focus:outline-none"
           />
           {showModal && (
