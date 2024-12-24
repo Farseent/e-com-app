@@ -6,7 +6,7 @@ const ManageUsers = () => {
     
     useEffect(() => {
         getAllUsers().then((res) => setUsers(res.data));
-    }, []);
+    }, []); 
 
     const handleonClick = (id,status) => {
         if (window.confirm(`Are you sure you want to ${status?"unblock":"block"}  this user?`))

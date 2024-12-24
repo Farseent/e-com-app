@@ -1,15 +1,55 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 import { useCart } from "../context/CartContext";
+import { getAllProduct } from "../api/productApi";
 
 const Navbar = () => {
   const { handleLogout } = useUser();
   const {cart} = useCart();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [products, setProducts] = useState([]);
   const useName = localStorage.getItem("userName");
+  const  navigate  = useNavigate();
+
+  useEffect(()=>{
+    const fetchProducts = async () =>{
+      if(searchTerm.trim()===''){
+        setProducts([]);
+        setShowModal(false);
+        return;
+      }
+      try{
+        const res = await getAllProduct();
+        const searchProducts = res.data.filter(product=>(
+          product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        ));
+        setProducts(searchProducts);
+        setShowModal(true);
+      }
+      catch(error){
+        console.error("Error while searching Products", error);
+      }
+    }
+
+    const delaySearch = setTimeout(() => {
+      fetchProducts();
+    }, 300);
+
+    return () => clearTimeout(delaySearch);
+  },[searchTerm])
+
+  const handleProductClick = (productId)=>{
+    setShowModal(false)
+    setSearchTerm("");
+    navigate(`/product-details/${productId}`)
+  }
+
+
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -20,7 +60,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 z-50">
+    <div className="sticky top-0 z-40">
       {/* Main navbar container */}
       <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -32,11 +72,17 @@ const Navbar = () => {
           {/* Search Bar */}
           <div className="relative flex items-center bg-white rounded-full px-2 py-1 md:w-1/2 w-2/3 max-w-sm focus-within:ring-2 focus-within:ring-blue-300">
             <FiSearch className="text-gray-500 text-lg" />
-            <input
-              type="text"
-              className="ml-2 focus:outline-none text-sm w-full"
-              placeholder="Search products..."
-            />
+            <input onChange={(e)=>setSearchTerm(e.target.value)} value={searchTerm} type="search" placeholder=' Search...' 
+              className='bg-transparent w-[100%] focus:outline-none' />
+            {showModal && products.length>0 && (
+              <div className='absolute top-6 left-0 mt-3 overflow-y-auto z-50 w-full max-h-60 bg-white border rounded-lg'>
+                <ul className='divide-y divide-gray-300'>
+                  {products.map(product=>(
+                    <li key={product.id} onClick={()=>handleProductClick(product.id)} className='cursor-pointer p-2'>{product.name}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           {/* Desktop Menu Links */}

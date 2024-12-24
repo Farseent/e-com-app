@@ -22,7 +22,7 @@ const ManageOrders = () => {
     return (
         <div className="container mx-auto py-6 px-4 max-w-7xl">
             {/* Header */}
-            <h1 className="text-3xl font-bold mb-6 text-gray-800">Manage Orders</h1>
+            <h1 className="text-2xl font-bold mb-6 ">Manage Orders</h1>
 
             {/* Orders Grid */}
             <div className="grid grid-cols-1 gap-6">

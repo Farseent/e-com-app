@@ -29,7 +29,6 @@ const ManageProducts = () => {
              <h1 className="text-2xl font-bold mb-6">Manage Products</h1>
             <div className= " mb-8 px-6">
                 <NavLink to={'/admin/addproduct'}> <button className="mt-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow-sm transition-all duration-200">Add Product</button></NavLink>
-                {/* <img src="https://cdn-icons-png.flaticon.com/512/10485/10485973.png" alt="Add Product" className='size-10' /> */}
             </div>
 
             {/* Product Table */}

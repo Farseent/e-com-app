@@ -42,7 +42,7 @@ const ProductDetails = () => {
             />
             <div>
               <h1 className="text-3xl font-bold text-gray-800">{product.name}</h1>
-              <p className="text-gray-600 mt-2 text-lg">{product.price}</p>
+              <p className="text-gray-600 mt-2 text-lg">₹  {product.price}</p>
               <p className="text-gray-500 mt-4">{product.description}</p>
               <button
                 className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 mt-6 rounded"

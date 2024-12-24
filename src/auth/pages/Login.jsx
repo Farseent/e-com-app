@@ -30,7 +30,7 @@ const Login = () => {
       <div className="flex flex-col items-center w-[350px] h-auto rounded-lg p-4 border shadow-lg">
         <h1 className="font-bold text-3xl mt-5 font-serif">Login</h1>
         <form className="p-6 w-80" onSubmit={handleSubmit}>
-          {message && <p className="text-red-500 ml-[45px]">{message}</p>}
+          {message && <p className="text-red-500 text-center">{message}</p>}
           <input
             type="email"
             placeholder="Email"

@@ -21,7 +21,7 @@ const Dashboard = () => {
     <div className="min-h-screen flex flex-col bg-gray-100">
       {/* Dashboard Header */}
       <header className="bg-white shadow p-6">
-        <h1 className="text-3xl font-bold text-gray-800">Admin Dashboard</h1>
+        <h1 className="text-2xl font-bold">Admin Dashboard</h1>
       </header>
 
       <main className="flex-1 flex flex-col p-6">
