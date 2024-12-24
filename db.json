@@ -51,14 +51,6 @@
       "role": "user",
       "blocked": false,
       "cart": []
-    },
-    {
-      "id": "659b",
-      "name": "hgfjh",
-      "email": "kjhg@gmail.com",
-      "password": "1234",
-      "role": "user",
-      "blocked": false
     }
   ],
   "orders": [
