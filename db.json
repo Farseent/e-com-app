@@ -15,7 +15,7 @@
       "email": "farseen247@gmail.com",
       "password": "1234",
       "role": "user",
-      "blocked": true,
+      "blocked": false,
       "cart": []
     },
     {

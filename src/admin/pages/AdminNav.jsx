@@ -5,7 +5,6 @@ import {
   FaBox,
   FaUsers,
   FaShoppingCart,
-  FaChartBar,
   FaSignOutAlt,
   FaBars,
 } from "react-icons/fa";
