@@ -77,7 +77,8 @@ const Navbar = () => {
       if (
         isDropdownOpen &&
         !event.target.closest("#user-dropdown") &&
-        !event.target.closest("#user-button")
+        !event.target.closest("#user-button") &&
+        !event.target.closest(".dropdown-options")
       ) {
         setDropdownOpen(false);
       }
@@ -180,7 +181,7 @@ const Navbar = () => {
                   {userName}
                 </button>
                 {isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 text-gray-700 z-50">
+                  <div id="user-dropdown" className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 text-gray-700 z-50">
                     <NavLink
                       to="/profile"
                       className="block px-4 py-2 hover:bg-gray-100"

@@ -16,16 +16,7 @@
       "password": "1234",
       "role": "user",
       "blocked": false,
-      "cart": [
-        {
-          "id": "3",
-          "name": "Google Pixel 8",
-          "price": "74999",
-          "image": "https://virtual2web.com/12161-superlarge_default/google-pixel-8-pro-5g-12gb-128gb-blanco-porcelain-dual-sim-ga04798.jpg",
-          "description": "8GB RAM + 128GB Storage | 6.2-inch OLED Display | IP68 Water & Dust Resistance | Google Tensor G3 Chip | 50MP Dual Rear Cameras | 4000mAh Battery | 30W Fast Charging",
-          "qty": 1
-        }
-      ]
+      "cart": []
     },
     {
       "id": "12cf",
@@ -115,6 +106,37 @@
         "number": "9988774411"
       },
       "date": "2024-12-24T05:59:24.900Z"
+    },
+    {
+      "id": "2433",
+      "userId": "65e2",
+      "userName": "Farseen ",
+      "items": [
+        {
+          "id": "2",
+          "name": "Samsung Galaxy S23",
+          "price": 79999,
+          "image": "https://m.media-amazon.com/images/I/51hqXIAVXAL.jpg",
+          "description": "8GB RAM + 128GB Storage | 6.1-inch Dynamic AMOLED 2X Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 3900mAh Battery | 25W Fast Charging",
+          "qty": 1
+        },
+        {
+          "id": "8",
+          "name": "Vivo X80 Pro",
+          "price": 79999,
+          "image": "https://s.alicdn.com/@sc04/kf/H249126385f5342c9805d2c26c1e99921t.jpg_720x720q50.jpg",
+          "description": "12GB RAM + 256GB Storage | 6.78-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 1 | 50MP Quad Rear Cameras | 4700mAh Battery | 80W Fast Charging",
+          "qty": 1
+        }
+      ],
+      "total": 159998,
+      "paymentMethod": "Credit Card",
+      "address": {
+        "name": "Faseeh",
+        "place": "ABC house, California",
+        "number": "1234567890"
+      },
+      "date": "2024-12-24T16:03:31.011Z"
     }
   ],
   "products": [
@@ -222,6 +244,13 @@
       "price": 42999,
       "image": "https://dakauf.eu/wp-content/uploads/2022/10/iPhoneSE_2022_midn.jpg",
       "description": "4GB RAM + 64GB Storage | 4.7-inch Retina HD Display | IP67 Water & Dust Resistance | A15 Bionic Chip | 12MP Rear Camera | 2227mAh Battery | 18W Fast Charging"
+    },
+    {
+      "id": "8cab",
+      "name": "Nothing Phone 2",
+      "price": "39998",
+      "description": "12 GB RAM | 256 GB ROM | 17.02 cm (6.7 inch) Full HD+ Display | 50 MP(OIS) +50MP | 32MP Front Camera | 4700 mAh Lithium ion Battery | Qualcomm Snapdragon 8+  | Gen 1 Processor | LTPO AMOLED (1 Hz - 120 Hz)",
+      "image": "\thttps://m.media-amazon.com/images/I/812zEF5pJAL._SX679_.jpg"
     }
   ]
 }

@@ -65,23 +65,23 @@ const Cart = () => {
           ))}
   
           {/* Cart Summary */}
-          <div className="mt-6 flex flex-col sm:flex-row justify-between items-center bg-gray-50 p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold text-gray-800">Total: ₹{totalPrice}</h3>
-            <div className="space-x-4 mt-4 sm:mt-0">
-              <button
-                onClick={clearCart}
-                className="bg-red-500 text-white px-8 py-3 rounded-md hover:bg-red-600 transition-all"
-              >
-                Clear Cart
-              </button>
-              <button
-                onClick={handleCheckout}
-                className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-all"
-              >
-                Checkout
-              </button>
+          <div className="mt-6 flex flex-col sm:flex-row justify-between items-center bg-gray-50 p-6 rounded-lg shadow-md sticky bottom-0 z-10">
+              <h3 className="text-xl font-bold text-gray-800">Total: ₹{totalPrice}</h3>
+              <div className="space-x-4 mt-4 sm:mt-0">
+                <button
+                  onClick={clearCart}
+                  className="bg-red-500 text-white px-8 py-3 rounded-md hover:bg-red-600 transition-all"
+                >
+                  Clear Cart
+                </button>
+                <button
+                  onClick={handleCheckout}
+                  className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-all"
+                >
+                  Checkout
+                </button>
+              </div>
             </div>
-          </div>
         </>
       ) : (
         /* Empty Cart State */
