@@ -66,13 +66,6 @@ const AdminNav = () => {
             <FaShoppingCart className="mr-2" />
             View Orders
           </Link>
-          <Link
-            to="/admin/reports"
-            className="flex items-center text-sm font-medium hover:text-gray-400 transition-all"
-          >
-            <FaChartBar className="mr-2" />
-            Reports
-          </Link>
         </nav>
 
         {/* Logout Button */}
@@ -131,14 +124,6 @@ const AdminNav = () => {
           >
             <FaShoppingCart className="mr-2" />
             View Orders
-          </Link>
-          <Link
-            to="/admin/reports"
-            className="w-full flex items-center text-sm font-medium hover:text-gray-400 transition-all"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <FaChartBar className="mr-2" />
-            Reports
           </Link>
           <button
             className="w-full flex items-center text-sm font-medium hover:text-red-500 transition-all"

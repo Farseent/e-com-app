@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getAllOrders } from '../../api/adminApi';
-import { FiPackage, FiUser, FiCalendar, FiDollarSign } from 'react-icons/fi';
+import { FiPackage, FiUser, FiCalendar } from 'react-icons/fi';
+import { MdCurrencyRupee } from 'react-icons/md';
 
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
@@ -76,7 +77,7 @@ const ManageOrders = () => {
                                         {/* Total Price */}
                                         <div>
                                             <div className="flex items-center space-x-2 mb-2">
-                                                <FiDollarSign className="text-blue-500" />
+                                                <MdCurrencyRupee className="text-blue-500" />
                                                 <span className="font-medium text-gray-800">Total Amount</span>
                                             </div>
                                             <p className="text-lg font-semibold text-gray-800">₹{order.total}</p>
@@ -142,7 +143,7 @@ const ManageOrders = () => {
                                                     <h3 className="text-lg font-medium text-gray-800 mb-4">Payment Details</h3>
                                                     <div className="bg-white p-4 rounded-lg shadow-sm">
                                                         <p className="text-gray-600">Payment Method: {order.paymentMethod}</p>
-                                                        <p className="font-medium text-gray-800 mt-2">Total Paid: ${order.total}</p>
+                                                        <p className="font-medium text-gray-800 mt-2">Total Paid: ₹{order.total}</p>
                                                     </div>
                                                 </div>
                                             </div>

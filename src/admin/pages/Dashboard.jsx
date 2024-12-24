@@ -12,7 +12,7 @@ const Dashboard = () => {
     getAllProduct().then((res) => setTotalProducts(res.data.length));
     getAllOrders().then((res) => {
       setTotalOrders(res.data.length);
-      setTotalRevenue(res.data.reduce((acc, order) => acc + order.amount, 0)); // Example revenue calculation
+      setTotalRevenue(res.data.reduce((acc, order) => acc + order.total, 0)); // Example revenue calculation
     });
     getAllUsers().then((res) => setTotalUsers(res.data.length));
   }, []);
@@ -31,7 +31,7 @@ const Dashboard = () => {
             { title: "Total Users", value: totalUsers, icon: "👥", bgColor: "bg-blue-100" },
             { title: "Total Products", value: totalProducts, icon: "📦", bgColor: "bg-green-100" },
             { title: "Total Orders", value: totalOrders, icon: "🛒", bgColor: "bg-yellow-100" },
-            { title: "Revenue", value: `$${totalRevenue.toFixed(2)}`, icon: "💰", bgColor: "bg-red-100" },
+            { title: "Revenue", value: `₹${totalRevenue.toFixed(2)}`, icon: "💰", bgColor: "bg-red-100" },
           ].map((card, idx) => (
             <div key={idx} className={`rounded-lg shadow-md p-6 ${card.bgColor} flex items-center`}>
               <div className="text-4xl mr-4">{card.icon}</div>
