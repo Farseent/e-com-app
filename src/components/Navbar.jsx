@@ -5,6 +5,7 @@ import { useUser } from "../context/UserContext";
 import { useCart } from "../context/CartContext";
 import { getAllProduct } from "../api/productApi";
 import { FaBars } from "react-icons/fa";
+import { MdOutlineAccountCircle } from "react-icons/md";
 
 const Navbar = () => {
   const { handleLogout } = useUser();
@@ -238,6 +239,18 @@ const Navbar = () => {
           >
             <FiHome className="mr-2" />
             Home
+          </NavLink>
+          <NavLink
+            to="/profile"
+            className={({ isActive }) =>
+              `w-full flex items-center text-sm font-medium ${
+                isActive ? "text-blue-600" : "hover:text-blue-400"
+              }`
+            }
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <MdOutlineAccountCircle className="mr-2" />
+            Profile
           </NavLink>
           <NavLink
             to="/cart"
