@@ -223,10 +223,12 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
+
         <div
           id="mobile-menu"
-          className="absolute top-14 left-0 bg-gray-900 w-full rounded-lg p-4 space-y-4 z-50 shadow-lg"
+          className={`absolute top-14 left-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 w-full rounded-b-lg p-4 space-y-4 z-50 overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          }`}
         >
           <NavLink
             to="/"
@@ -298,7 +300,7 @@ const Navbar = () => {
             </NavLink>
           )}
         </div>
-      )}
+
     </div>
   );
 };
