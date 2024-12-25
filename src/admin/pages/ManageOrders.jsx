@@ -22,7 +22,7 @@ const ManageOrders = () => {
     return (
         <div className="container mx-auto py-6 px-4 max-w-7xl">
             {/* Header */}
-            <h1 className="text-2xl font-bold mb-6 ">Manage Orders</h1>
+            <h1 className="text-2xl font-bold mb-6">Manage Orders</h1>
 
             {/* Orders Grid */}
             <div className="grid grid-cols-1 gap-6">
@@ -96,11 +96,15 @@ const ManageOrders = () => {
                                 </div>
 
                                 {/* Expanded Order Details */}
-                                {isExpanded && (
+                                <div
+                                    className={`transition-max-height duration-500 overflow-hidden ${
+                                        isExpanded ? 'max-h-screen' : 'max-h-0'
+                                    }`}
+                                >
                                     <div className="border-t border-gray-100 bg-gray-50 p-6">
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             {/* Order Items */}
-                                            <div >
+                                            <div>
                                                 <h3 className="text-lg font-medium text-gray-800 mb-4">Order Items</h3>
                                                 <div className="space-y-3">
                                                     {order.items.map((item, index) => (
@@ -124,12 +128,11 @@ const ManageOrders = () => {
                                                                     Subtotal: ₹{item.qty * item.price}
                                                                 </p>
                                                             </div>
-                                                            
                                                         </div>
                                                     ))}
                                                 </div>
                                             </div>
-                                            <div className="space-y-6">        
+                                            <div className="space-y-6">
                                                 {/* Address Details */}
                                                 <div>
                                                     <h3 className="text-lg font-medium text-gray-800 mb-4">Shipping Address</h3>
@@ -149,7 +152,7 @@ const ManageOrders = () => {
                                             </div>
                                         </div>
                                     </div>
-                                )}
+                                </div>
                             </div>
                         );
                     })

@@ -87,55 +87,55 @@ const AdminNav = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div
-          id="mobile-menu"
-          className="absolute top-14 left-0 bg-gray-800 w-full rounded-lg p-4 space-y-4 z-50"
+      <div
+        id="mobile-menu"
+        className={`absolute top-14 left-0 bg-gray-900 w-full rounded-lg p-4 space-y-4 z-50 overflow-hidden transition-all duration-500 ease-in-out ${
+          isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <Link
+          to="/admin"
+          className="w-full flex items-center text-sm font-medium hover:text-gray-400 transition-all"
+          onClick={() => setIsMobileMenuOpen(false)}
         >
-          <Link
-            to="/admin"
-            className="w-full flex items-center text-sm font-medium hover:text-gray-400 transition-all"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <FaTachometerAlt className="mr-2" />
-            Dashboard
-          </Link>
-          <Link
-            to="/admin/manageproduct"
-            className="w-full flex items-center text-sm font-medium hover:text-gray-400 transition-all"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <FaBox className="mr-2" />
-            Manage Products
-          </Link>
-          <Link
-            to="/admin/manageusers"
-            className="w-full flex items-center text-sm font-medium hover:text-gray-400 transition-all"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <FaUsers className="mr-2" />
-            Manage Users
-          </Link>
-          <Link
-            to="/admin/manageorders"
-            className="w-full flex items-center text-sm font-medium hover:text-gray-400 transition-all"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <FaShoppingCart className="mr-2" />
-            View Orders
-          </Link>
-          <button
-            className="w-full flex items-center text-sm font-medium hover:text-red-500 transition-all"
-            onClick={() => {
-              setIsMobileMenuOpen(false);
-              handleLogout();
-            }}
-          >
-            <FaSignOutAlt className="mr-2" />
-            Logout
-          </button>
-        </div>
-      )}
+          <FaTachometerAlt className="mr-2" />
+          Dashboard
+        </Link>
+        <Link
+          to="/admin/manageproduct"
+          className="w-full flex items-center text-sm font-medium hover:text-gray-400 transition-all"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <FaBox className="mr-2" />
+          Manage Products
+        </Link>
+        <Link
+          to="/admin/manageusers"
+          className="w-full flex items-center text-sm font-medium hover:text-gray-400 transition-all"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <FaUsers className="mr-2" />
+          Manage Users
+        </Link>
+        <Link
+          to="/admin/manageorders"
+          className="w-full flex items-center text-sm font-medium hover:text-gray-400 transition-all"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <FaShoppingCart className="mr-2" />
+          View Orders
+        </Link>
+        <button
+          className="w-full flex items-center text-sm font-medium hover:text-red-500 transition-all"
+          onClick={() => {
+            setIsMobileMenuOpen(false);
+            handleLogout();
+          }}
+        >
+          <FaSignOutAlt className="mr-2" />
+          Logout
+        </button>
+      </div>
     </div>
   );
 };
