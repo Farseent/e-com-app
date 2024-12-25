@@ -17,7 +17,16 @@
       "role": "user",
       "blocked": false,
       "joined": "2024-12-20T11:56:17.286Z",
-      "cart": []
+      "cart": [
+        {
+          "id": "4",
+          "name": "OnePlus 12",
+          "price": "84999",
+          "image": "https://m.media-amazon.com/images/I/41OpAzcvdLL._SX300_SY300_QL70_FMwebp_.jpg",
+          "description": "16GB RAM + 512GB Storage | 6.7-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 50MP Triple Rear Camera | 100W Fast Charging Support",
+          "qty": 1
+        }
+      ]
     },
     {
       "id": "12cf",
@@ -162,120 +171,284 @@
         "number": "4455112277"
       },
       "date": "2024-12-25T11:25:59.248Z"
+    },
+    {
+      "id": "c6ea",
+      "userId": "8762",
+      "userName": "Fadiya",
+      "items": [
+        {
+          "id": "1",
+          "name": "iPhone 14 Pro",
+          "price": "99998",
+          "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a__WWEN.jpg?v=1692348972",
+          "description": "6GB RAM + 128GB Storage | 6.1-inch Super Retina XDR Display | IP68 Water & Dust Resistance | A15 Bionic Chip | 12MP Dual Rear Cameras | 20-Hour Video Playback | Fast Charging Support",
+          "qty": 1
+        },
+        {
+          "id": "3",
+          "name": "Google Pixel 8",
+          "price": "74999",
+          "image": "https://virtual2web.com/12161-superlarge_default/google-pixel-8-pro-5g-12gb-128gb-blanco-porcelain-dual-sim-ga04798.jpg",
+          "description": "8GB RAM + 128GB Storage | 6.2-inch OLED Display | IP68 Water & Dust Resistance | Google Tensor G3 Chip | 50MP Dual Rear Cameras | 4000mAh Battery | 30W Fast Charging",
+          "qty": 1
+        }
+      ],
+      "total": 174997,
+      "paymentMethod": "Cash on Delivery",
+      "address": {
+        "name": "Fadiya",
+        "place": "Thayyil house, Kangappara, Mampuram (po), 676306",
+        "number": "7902689868"
+      },
+      "date": "2024-12-25T12:21:17.350Z"
     }
   ],
   "products": [
     {
       "id": "1",
-      "name": "iPhone 14 Pro",
-      "price": "99998",
-      "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Deep_Purple_PDP_Image_Position-1a__WWEN.jpg?v=1692348972",
-      "description": "6GB RAM + 128GB Storage | 6.1-inch Super Retina XDR Display | IP68 Water & Dust Resistance | A15 Bionic Chip | 12MP Dual Rear Cameras | 20-Hour Video Playback | Fast Charging Support"
+      "name": "iPhone 16 Pro",
+      "price": "129999",
+      "image": "https://m.media-amazon.com/images/I/61qV17Px4NL._SX679_.jpg",
+      "description": "8GB RAM + 256GB Storage | 6.3-inch Super Retina XDR Display | A18 Bionic Chip | Triple Rear Camera (48MP + 12MP + 12MP) | 25-Hour Video Playback | Fast Wireless Charging Support"
     },
     {
       "id": "2",
-      "name": "Samsung Galaxy S23",
-      "price": 79999,
-      "image": "https://m.media-amazon.com/images/I/51hqXIAVXAL.jpg",
-      "description": "8GB RAM + 128GB Storage | 6.1-inch Dynamic AMOLED 2X Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 3900mAh Battery | 25W Fast Charging"
+      "name": "Samsung Galaxy S24 Ultra",
+      "price": "119999",
+      "image": "https://m.media-amazon.com/images/I/81NEVf26quL._SX679_.jpg",
+      "description": "12GB RAM + 512GB Storage | 6.8-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 200MP Quad Rear Camera | S Pen Included | 45W Fast Charging Support"
     },
     {
       "id": "3",
-      "name": "Google Pixel 8",
-      "price": "74999",
-      "image": "https://virtual2web.com/12161-superlarge_default/google-pixel-8-pro-5g-12gb-128gb-blanco-porcelain-dual-sim-ga04798.jpg",
-      "description": "8GB RAM + 128GB Storage | 6.2-inch OLED Display | IP68 Water & Dust Resistance | Google Tensor G3 Chip | 50MP Dual Rear Cameras | 4000mAh Battery | 30W Fast Charging"
+      "name": "Google Pixel 9 Pro",
+      "price": "99999",
+      "image": "https://m.media-amazon.com/images/I/71uAesjXh5L._AC_SX569_.jpg",
+      "description": "12GB RAM + 256GB Storage | 6.7-inch OLED Display | Tensor G4 Chip | 50MP + 12MP Dual Rear Camera | Android 14 | 30W Fast Charging Support"
     },
     {
       "id": "4",
-      "name": "OnePlus 11",
-      "price": 54999,
-      "image": "https://oasis.opstatics.com/content/dam/oasis/page/2023/na/oneplus-11/specs/green-img.png",
-      "description": "12GB RAM + 256GB Storage | 6.7-inch Fluid AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 5000mAh Battery | 100W Fast Charging"
+      "name": "OnePlus 12",
+      "price": "84999",
+      "image": "https://m.media-amazon.com/images/I/41OpAzcvdLL._SX300_SY300_QL70_FMwebp_.jpg",
+      "description": "16GB RAM + 512GB Storage | 6.7-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 50MP Triple Rear Camera | 100W Fast Charging Support"
     },
     {
       "id": "5",
-      "name": "Xiaomi Mi 13",
-      "price": 69999,
-      "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677429532.40596257.png",
-      "description": "12GB RAM + 256GB Storage | 6.36-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 2 | 50MP Triple Rear Cameras | 4500mAh Battery | 67W Fast Charging"
+      "name": "iPhone 16",
+      "price": "78900",
+      "image": "https://m.media-amazon.com/images/I/713SsA7gftL._SX679_.jpg",
+      "description": "12GB RAM + 512GB Storage | 6.7-inch Display | Proprietary Chipset | Quad Rear Camera | HarmonyOS Next | 40W Wireless Charging"
     },
     {
       "id": "6",
-      "name": "Oppo Find X5 Pro",
-      "price": 109999,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHPgnVs9pMK3FvybJS_b-nCYVOVozWn-GouWan7RwF1_UWDjgiFqimh-ECDltJXcFNX0&usqp=CAU",
-      "description": "12GB RAM + 256GB Storage | 6.7-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 1 | 50MP Quad Rear Cameras | 5000mAh Battery | 80W SuperVOOC Charging"
+      "name": "Xiaomi 14",
+      "price": "74999",
+      "image": "https://m.media-amazon.com/images/I/71MsYJjQhBL._SX679_.jpg",
+      "description": "12GB RAM + 256GB Storage | 6.73-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 50MP Triple Rear Camera | 120W HyperCharge | MIUI 15"
     },
     {
       "id": "7",
-      "name": "Realme GT 2 Pro",
-      "price": 57999,
-      "image": "https://images.jdmagicbox.com/quickquotes/images_main/gt-2-pro-ram-12-gb-256-gb-paper-green-271165723-mgz93q4t.png",
-      "description": "12GB RAM + 256GB Storage | 6.7-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 1 | 50MP Triple Rear Cameras | 5000mAh Battery | 65W Fast Charging"
+      "name": "Samsung Galaxy S24",
+      "price": "99999",
+      "image": "https://m.media-amazon.com/images/I/71ez69tPl4L._SX679_.jpg",
+      "description": "8GB RAM + 512GB Storage | 6.2-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | Triple Rear Camera (12MP + 12MP + 12MP)"
     },
     {
       "id": "8",
-      "name": "Vivo X80 Pro",
-      "price": 79999,
-      "image": "https://s.alicdn.com/@sc04/kf/H249126385f5342c9805d2c26c1e99921t.jpg_720x720q50.jpg",
-      "description": "12GB RAM + 256GB Storage | 6.78-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 1 | 50MP Quad Rear Cameras | 4700mAh Battery | 80W Fast Charging"
+      "name": "Vivo X200 Pro+",
+      "price": "89999",
+      "image": "https://m.media-amazon.com/images/I/4113f-qkKcL._SX300_SY300_QL70_FMwebp_.jpg",
+      "description": "16GB RAM + 512GB Storage | 6.78-inch AMOLED Display | MediaTek Dimensity 9400 | 200MP Rear Camera | ZEISS Optics | 120W Fast Charging"
     },
     {
       "id": "9",
-      "name": "Sony Xperia 1 IV",
-      "price": 129999,
-      "image": "https://28mobile.com/cdn/shop/products/BLACK_8@2x.jpg?v=1665817259",
-      "description": "12GB RAM + 256GB Storage | 6.5-inch 4K OLED Display | IP68 Water & Dust Resistance | Snapdragon 8 Gen 1 | 12MP Triple Rear Cameras | 5000mAh Battery | 30W Fast Charging"
+      "name": "Realme GT7 Pro",
+      "price": "59999",
+      "image": "https://m.media-amazon.com/images/I/41WpAGDeZyL._SY300_SX300_.jpg",
+      "description": "12GB RAM + 256GB Storage | 6.74-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 50MP Dual Rear Camera | 150W UltraDart Charging"
     },
     {
       "id": "10",
-      "name": "Motorola Edge 30",
-      "price": 39999,
-      "image": "https://bhatiamobile.com/file/2023/05/edge-30-fusion-5G_Grey_2.png",
-      "description": "8GB RAM + 128GB Storage | 6.5-inch OLED Display | IP52 Water & Dust Resistance | Snapdragon 778G+ | 50MP Triple Rear Cameras | 4020mAh Battery | 33W Fast Charging"
+      "name": "Oppo Find X8 Pro",
+      "price": "99999",
+      "image": "https://opsg-img-cdn-gl.heytapimg.com/epb/202411/07/KVW4XjNpEKXttktp.png?x-amz-process=image/format,webp/quality,Q_80",
+      "description": "12GB RAM + 512GB Storage | 6.8-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 50MP Triple Rear Camera | 80W Fast Charging"
     },
     {
       "id": "11",
-      "name": "Nokia G50",
-      "price": 18999,
-      "image": "https://28mobile.com/cdn/shop/products/NokiaG50TA-13616_128GbBlue_grande@2x.jpg?v=1667547713",
-      "description": "4GB RAM + 64GB Storage | 6.82-inch HD+ Display | IP52 Water & Dust Resistance | Snapdragon 480 5G | 48MP Triple Rear Cameras | 5000mAh Battery | 18W Fast Charging"
+      "name": "Asus ROG Phone 8",
+      "price": "99999",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRvRMn3Cr7apf54qZHrgPrV_PVFzy7sIDLoC8w7rZQV92OGfrRkBpt2yyIVsQmos0SThluaHYypfE_G0oo_MdTyKcshl5BPbQ",
+      "description": "16GB RAM + 512GB Storage | 6.78-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 6000mAh Battery | 65W Fast Charging | Gaming Triggers"
     },
     {
       "id": "12",
-      "name": "Asus Zenfone 9",
-      "price": 59999,
-      "image": "https://dlcdnwebimgs.asus.com/gain/9c259f4b-2e42-4716-a468-736c291368ce/",
-      "description": "8GB RAM + 128GB Storage | 5.9-inch AMOLED Display | IP68 Water & Dust Resistance | Snapdragon 8+ Gen 1 | 50MP Dual Rear Cameras | 4300mAh Battery | 30W Fast Charging"
+      "name": "Nothing Phone 2",
+      "price": "39999",
+      "image": "https://vlebazaar.in/image/cache/wp/gj/B0C61WF1RM/Nothing-Phone-2-5G---67-LTPO-AMOLED-Display-256GB--12GB-RAM-Glyph-Interface-OS-2-550x550h.webp",
+      "description": "12GB RAM + 256GB Storage | 6.55-inch AMOLED Display | Snapdragon 8 Gen 2 Processor | Glyph Interface | 50MP Dual Rear Camera | 33W Fast Charging"
     },
     {
       "id": "13",
-      "name": "Huawei P50 Pro",
-      "price": 109999,
-      "image": "https://media.wisemarket.ae/variant/inventory_30097.webp",
-      "description": "8GB RAM + 256GB Storage | 6.6-inch OLED Display | IP68 Water & Dust Resistance | Kirin 9000 5G | 50MP Quad Rear Cameras | 4360mAh Battery | 50W Wireless Charging"
+      "name": "Google Pixel 9",
+      "price": "79999",
+      "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1723573787/Croma%20Assets/Communication/Mobiles/Images/309167_0_arn19i.png?tr=w-360",
+      "description": "8GB RAM + 256GB Storage | 6.4-inch OLED Display | Tensor G4 Chip | 50MP Dual Rear Camera | 4000mAh Battery | 30W Fast Charging"
     },
     {
       "id": "14",
-      "name": "LG Velvet",
-      "price": 34999,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/LG_Velvet_Aurora_Green_version.jpg",
-      "description": "6GB RAM + 128GB Storage | 6.8-inch OLED Display | IP68 Water & Dust Resistance | Snapdragon 765G | 48MP Triple Rear Cameras | 4300mAh Battery | 18W Fast Charging"
+      "name": "iQOO 13",
+      "price": "54999",
+      "image": "https://m.media-amazon.com/images/I/41LBUHSUteL._SX300_SY300_QL70_FMwebp_.jpg",
+      "description": "12GB RAM + 256GB Storage | 6.78-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 50MP Triple Rear Camera | 120W Fast Charging"
     },
     {
       "id": "15",
-      "name": "Apple iPhone SE 2022",
-      "price": 42999,
-      "image": "https://dakauf.eu/wp-content/uploads/2022/10/iPhoneSE_2022_midn.jpg",
-      "description": "4GB RAM + 64GB Storage | 4.7-inch Retina HD Display | IP67 Water & Dust Resistance | A15 Bionic Chip | 12MP Rear Camera | 2227mAh Battery | 18W Fast Charging"
+      "name": "Samsung Galaxy Z Fold 6",
+      "price": "164999",
+      "image": "https://www.designinfo.in/wp-content/uploads/2024/07/6586750_sd-1-485x472-optimized.jpg",
+      "description": "12GB RAM + 512GB Storage | 7.6-inch Foldable AMOLED Display | Snapdragon 8 Gen 3 Processor | Triple Rear Camera | 45W Fast Charging"
     },
     {
-      "id": "8cab",
-      "name": "Nothing Phone 2",
-      "price": "39998",
-      "description": "12 GB RAM | 256 GB ROM | 17.02 cm (6.7 inch) Full HD+ Display | 50 MP(OIS) +50MP | 32MP Front Camera | 4700 mAh Lithium ion Battery | Qualcomm Snapdragon 8+  | Gen 1 Processor | LTPO AMOLED (1 Hz - 120 Hz)",
-      "image": "\thttps://m.media-amazon.com/images/I/812zEF5pJAL._SX679_.jpg"
+      "id": "16",
+      "name": "Samsung Galaxy Z Flip 6",
+      "price": "169999",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-f741blbains/gallery/in-galaxy-zflip6-f741-513517-sm-f741blbains-thumb-542848009?$240_240_PNG$",
+      "description": "12GB RAM + 512GB Storage | 6.7-inch Foldable AMOLED Display | Snapdragon 8 Gen 3 Processor | Dual Rear Camera | 25W Fast Charging"
+    },
+    {
+      "id": "17",
+      "name": "Google Pixel 9 Pro Fold",
+      "price": "172999",
+      "image": "https://www.reliancedigital.in/medias/GoogleGoogle-Pixel-9ProFold-494422674-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyODk4ODB8aW1hZ2UvanBlZ3xpbWFnZXMvaGJkL2g0Ny8xMDIxMjIxODY2NzAzOC5qcGd8NTc3Y2UzNGE2N2VmZjk3ZjFkZmY3NmQwNmViODhjMzg5ZDNlNDliZjJiNGIzNDE4NGMwMDdkZDdkZmYzMzhiMg",
+      "description": "12GB RAM + 256GB Storage | 7.2-inch Foldable OLED Display | Tensor G4 Chip | Dual Rear Camera | 30W Fast Charging"
+    },
+    {
+      "id": "19",
+      "name": "Realme Narzo 70 Turbo 5G",
+      "price": "22999",
+      "image": "https://m.media-amazon.com/images/I/41o-mCLqnEL._SX300_SY300_QL70_FMwebp_.jpg",
+      "description": "8GB RAM + 128GB Storage | 6.6-inch FHD+ LCD Display | MediaTek Dimensity 9000 | 64MP Triple Rear Camera | 50W Fast Charging"
+    },
+    {
+      "id": "25",
+      "name": "Poco F6",
+      "price": "34999",
+      "image": "https://m.media-amazon.com/images/I/41wnpHS1UHL._SX300_SY300_QL70_FMwebp_.jpg",
+      "description": "8GB RAM + 256GB Storage | 6.67-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 50MP Triple Rear Camera | 67W Fast Charging"
+    },
+    {
+      "id": "28",
+      "name": "Asus Zenfone 10",
+      "price": "57999",
+      "image": "https://dlcdnwebimgs.asus.com/gain/47ad8ab9-421f-495d-8513-20c6a8e2c115/w800",
+      "description": "12GB RAM + 512GB Storage | 6.1-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 50MP Dual Rear Camera | 100W Fast Charging"
+    },
+    {
+      "id": "31",
+      "name": "Samsung Galaxy A55",
+      "price": "39999",
+      "image": "https://m.media-amazon.com/images/I/71EeBkydf9L._SX679_.jpg",
+      "description": "Samsung Galaxy A55 5G | Metal Frame | 50 MP Main Camera (OIS) | Nightography | IP67 | Corning Gorilla Glass Victus+ | sAMOLED with Vision Booster"
+    },
+    {
+      "id": "32",
+      "name": "OnePlus Nord 3",
+      "price": "22999",
+      "image": "https://m.media-amazon.com/images/I/6116+vSW+1L._SX569_.jpg",
+      "description": "8GB RAM + 128GB Storage | 6.72-inch LCD Display | MediaTek Dimensity 9000  | 50MP Rear Camera | 67W SUPERVOOC Charging"
+    },
+    {
+      "id": "34",
+      "name": "iPhone SE (2024)",
+      "price": "42999",
+      "image": "https://m.media-amazon.com/images/I/31eq5m7D5uL._SY445_SX342_QL70_FMwebp_.jpg",
+      "description": "4GB RAM + 64GB Storage | 4.7-inch Retina HD Display | A15 Bionic Chip | 12MP Rear Camera | Touch ID | 20W Fast Charging"
+    },
+    {
+      "id": "36",
+      "name": "Oppo Reno 12 Pro",
+      "price": "32999",
+      "image": "https://m.media-amazon.com/images/I/51AVBqkFR6L._SY741_.jpg",
+      "description": "12 GB RAM | 256 GB ROM | Expandable Upto 1 TB | 17.02 cm (6.7 inch) Full HD+ Display | 50MP + 8MP + 50MP | 50MP Front Camera | 5000 mAh Battery | Dimensity 7300 Energy Processor"
+    },
+    {
+      "id": "40",
+      "name": "Xiaomi Redmi Note 13 Pro",
+      "price": "24999",
+      "image": "https://m.media-amazon.com/images/I/51Qfyn4vOjL._SX300_SY300_QL70_FMwebp_.jpg",
+      "description": "8GB RAM + 256GB Storage | 6.67-inch AMOLED Display | Snapdragon 7+ Gen 2 | 200MP Rear Camera | 67W Fast Charging"
+    },
+    {
+      "id": "42",
+      "name": "iQOO Z9 Pro",
+      "price": "23999",
+      "image": "https://m.media-amazon.com/images/I/41tS3gyOW1L._SX300_SY300_QL70_FMwebp_.jpg",
+      "description": "iQOO Z9s 5G (Onyx Green, 8GB RAM, 128GB Storage) | 120 Hz 3D Curved AMOLED Display | 5500 mAh Ultra-Thin Battery | Dimesity 7300 5G Processor | Sony IMX882 OIS Camera with Aura Light"
+    },
+    {
+      "id": "44",
+      "name": "Honor X50",
+      "price": "27999",
+      "image": "https://pmcjewellery.co.za/cdn/shop/products/EDA004966701D.jpg?v=1696799589&width=493",
+      "description": "Honor X50 5G, 108MP Camera, 6.78 inch MagicOS 7.1.1 Snapdragon 6 Gen1 Octa Core up to 2.2GHz, Network: 5G, OTG, Not Support Google Play, Memory:8GB+128GB(Silver)\n"
+    },
+    {
+      "id": "47",
+      "name": "Samsung Galaxy F15",
+      "price": "12999",
+      "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1717062330/Croma%20Assets/Communication/Mobiles/Images/305365_0_a6khel.png?tr=w-360",
+      "description": "6.5 inches (16.51 cm) Super AMOLED, 90 Hz | 4GB 128GB | MediaTek Dimensity 6100+ | 50 MP + 5 MP + 2 MP Triple Rear & 13 MP Front Camera | 6000 mAh\n"
+    },
+    {
+      "id": "48",
+      "name": "Realme Narzo 70x",
+      "price": "11999",
+      "image": "https://m.media-amazon.com/images/I/71w-mmKgIfL._SX679_.jpg",
+      "description": "6GB RAM,128GB Storage |120Hz Ultra Smooth Display | Dimensity 6100+ 6nm 5G|50MP AI Camera|45W Charger in The Box"
+    },
+    {
+      "id": "51",
+      "name": "Samsung Galaxy M35 ",
+      "price": "19998",
+      "image": "https://m.media-amazon.com/images/I/81nJiu51M+L._SX569_.jpg",
+      "description": "8GB RAM,256GB Storage| Corning Gorilla Glass Victus+| AnTuTu Score 595K+ | Vapour Cooling Chamber | 6000mAh Battery | 120Hz Super AMOLED Display| Without Charger"
+    },
+    {
+      "id": "52",
+      "name": "Realme GT 7 Pro",
+      "price": "54999",
+      "image": "https://m.media-amazon.com/images/I/41WpAGDeZyL._SY300_SX300_.jpg",
+      "description": "Mars Orange,12GB+256GB | India's First Snapdragon 8 Elite Processor | 3X Periscope Flagship Camera| RealWorld Eco² OLED Plus Display"
+    },
+    {
+      "id": "53",
+      "name": "Redmi Note 14 5G ",
+      "price": "19999",
+      "image": "https://m.media-amazon.com/images/I/71+QToFrHXL._SX569_.jpg",
+      "description": "Titan Black, 8GB RAM 128GB Storage | Global Debut MTK Dimensity 7025 Ultra | 2100 nits Segment Brightest 120Hz AMOLED | 50MP Sony LYT 600 OIS+EIS Triple Camera"
+    },
+    {
+      "id": "54",
+      "name": "Oppo A3 Pro 5G",
+      "price": "17999",
+      "image": "https://m.media-amazon.com/images/I/41Bjj3YpmNL._SX300_SY300_QL70_FMwebp_.jpg",
+      "description": "Moonlight Purple, 8GB RAM, 128GB Storage | 6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC | with No Cost EMI/Additional Exchange Offers"
+    },
+    {
+      "id": "61",
+      "name": "Google Pixel 9",
+      "price": "79999",
+      "image": "https://www.reliancedigital.in/medias/GoogleGoogle-Pixel-9-494422685-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0MjA4Mzl8aW1hZ2UvanBlZ3xpbWFnZXMvaGRjL2gzOS8xMDIxMjI1NDc3NzM3NC5qcGd8ZDJlZjEyZDU4ODFiODQwMjE2MGRhN2I0YjVkOTM4MTI2YWRlZmUzODJlZmY3MmI3MTJkZDdlNTcyZTFmN2E4MA",
+      "description": "12 GB RAM, 256 GB Internal Memory | 16.00 cm (6.3 inch) Display | 50 MP Main Camera 48 MP 10.5 MP Front Camera | Google Tensor G4 | 4558 mAh"
+    },
+    {
+      "id": "66",
+      "name": "Google Pixel 8a",
+      "price": "41999",
+      "image": "https://www.reliancedigital.in/medias/GoogleGoogle-Pixel-8A-494422668-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyNzA3MTJ8aW1hZ2UvanBlZ3xpbWFnZXMvaDY2L2g3OS8xMDIxMjE4ODEyNzI2Mi5qcGd8ZTIwY2Q0ODAxZDNhYWIyOTI1YWQyYmEzODc5OTY2YzdkMjBhZDAyYzYzZWFmMDU3ZTI4NDZmZjQwYzRmMzdiYw",
+      "description": "8 GB RAM, 256 GB Internal Memory | 15.49 cm (6.1 inch), 1080 x 2400 Resolution, OLED Display | 64 MP Main Camera, 13 MP | 13 MP Front Camera | Google Tensor G3 | 4404 mAh, 30 Watts Fast Charger "
     }
   ]
 }
