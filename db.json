@@ -16,6 +16,7 @@
       "password": "1234",
       "role": "user",
       "blocked": false,
+      "joined": "2024-12-20T11:56:17.286Z",
       "cart": []
     },
     {
@@ -27,14 +28,6 @@
       "blocked": false
     },
     {
-      "id": "1c2e",
-      "name": "test",
-      "email": "test@gmail.com",
-      "password": "1234",
-      "role": "user",
-      "blocked": false
-    },
-    {
       "id": "2e1a",
       "name": "example",
       "email": "example@gmail.com",
@@ -42,6 +35,15 @@
       "role": "user",
       "blocked": false,
       "cart": []
+    },
+    {
+      "id": "c440",
+      "name": "Test",
+      "email": "test@gmail.com",
+      "password": "1234",
+      "role": "user",
+      "blocked": false,
+      "joined": "2024-12-25T11:56:17.286Z"
     }
   ],
   "orders": [

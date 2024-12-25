@@ -3,7 +3,7 @@ import { NavLink} from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 
 const Signup = () => {
-  const [form, setForm] = useState({ name: "", email: "", password: "",role:"user",blocked:false });
+  const [form, setForm] = useState({ name: "", email: "", password: "",role:"user",blocked:false,joined: new Date().toISOString() });
   const [message, setMessage] = useState("");
   const {handleSignup} = useUser();
 

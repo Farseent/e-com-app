@@ -44,9 +44,7 @@ const Profile = () => {
                 {user.name}
               </h2>
               <p className="text-gray-600">{user.email}</p>
-              <p className="text-sm text-gray-500 mt-1">
-                Joined on {new Date(user.joinedDate).toLocaleDateString()}
-              </p>
+              <p className="text-sm text-gray-500 mt-1">Joined on {new Intl.DateTimeFormat("en-GB", {day: "2-digit",month: "2-digit",year: "numeric",}).format(new Date(user.joined))}</p>
             </div>
           </div>
           <div className="flex space-x-4">
