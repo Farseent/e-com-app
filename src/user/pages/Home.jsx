@@ -63,7 +63,6 @@ const Home = () => {
                     onClick={(e) => {
                       e.preventDefault();
                       addToCart(product);
-                      // alert(`Added ${product.name} to the cart!`);
                     }}
                   >
                     Add to Cart
@@ -71,7 +70,7 @@ const Home = () => {
 
                   {/* Quick View Button */}
                   <button
-                    className="text-blue-600 hover:text-blue-700 text-sm underline"
+                    className="text-blue-600 hover:text-blue-700 text-sm underline hidden sm:block"
                     onClick={(e) => {
                       e.preventDefault();
                       navigate(`/product-details/${product.id}`);
