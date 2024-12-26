@@ -70,7 +70,7 @@ const Home = () => {
 
                   {/* Quick View Button */}
                   <button
-                    className="text-blue-600 hover:text-blue-700 text-sm underline hidden sm:block"
+                    className="text-blue-600 hover:text-blue-700 text-sm underline hidden md:block"
                     onClick={(e) => {
                       e.preventDefault();
                       navigate(`/product-details/${product.id}`);
