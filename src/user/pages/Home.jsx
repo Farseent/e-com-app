@@ -59,7 +59,7 @@ const Home = () => {
                 {/* Add to Cart Button */}
                 <div className="mt-4 flex justify-between items-center">
                   <button
-                    className="bg-blue-600 hover:bg-blue-700 text-white py-2 w-full md:w-28 rounded-lg text-sm transition "
+                    className="bg-blue-600 hover:bg-blue-700 text-white py-2 w-28 rounded-lg text-sm transition "
                     onClick={(e) => {
                       e.preventDefault();
                       addToCart(product);
@@ -70,7 +70,7 @@ const Home = () => {
 
                   {/* Quick View Button */}
                   <button
-                    className="text-blue-600 hover:text-blue-700 text-sm underline hidden md:block"
+                    className="text-blue-600 hover:text-blue-700 text-sm underline"
                     onClick={(e) => {
                       e.preventDefault();
                       navigate(`/product-details/${product.id}`);
