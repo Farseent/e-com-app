@@ -101,42 +101,42 @@ const Navbar = () => {
 
           {/* Search Bar */}
           <div className="relative flex items-center bg-white rounded-full px-2 py-1 md:w-1/2 w-2/3 max-w-sm focus-within:ring-2 focus-within:ring-blue-300">
-          <FiSearch className="text-gray-500 text-lg mr-2 " />
-          <input
-            id="search-input"
-            onChange={(e) => setSearchTerm(e.target.value)}
-            value={searchTerm}
-            type="search"
-            placeholder="Search..."
-            className="bg-transparent w-[100%] focus:outline-none"
-          />
-          {showModal && (
-            <div
-              id="search-modal"
-              className="absolute top-6 left-0 mt-3 z-50 w-full max-h-60 bg-white border shadow-lg rounded-lg overflow-hidden"
-            >
-              <div className="flex justify-between items-center px-4 py-2 bg-gray-100 border-b">
-                <h3 className="text-sm font-medium text-gray-700">Search Results</h3>
-              </div>
-              {products.length > 0 ? (
-                <ul className="divide-y divide-gray-300 overflow-y-auto">
-                  {products.map((product) => (
-                    <li
-                      key={product.id}
-                      onClick={() => handleProductClick(product.id)}
-                      className="cursor-pointer px-4 py-2 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none text-gray-700"
-                    >
-                      {product.name}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <div className="p-4 text-gray-500 text-center">
-                  <p>No products found. Please try a different search.</p>
+            <FiSearch className="text-gray-500 text-lg mr-2 " />
+            <input
+              id="search-input"
+              onChange={(e) => setSearchTerm(e.target.value)}
+              value={searchTerm}
+              type="search"
+              placeholder="Search..."
+              className="bg-transparent w-[100%] focus:outline-none"
+            />
+            {showModal && (
+              <div
+                id="search-modal"
+                className="absolute top-6 left-0 mt-3 z-50 w-full max-h-60 bg-white border shadow-lg rounded-lg overflow-hidden"
+              >
+                <div className="flex justify-between items-center px-4 py-2 bg-gray-100 border-b">
+                  <h3 className="text-sm font-medium text-gray-700">Search Results</h3>
                 </div>
-              )}
-            </div>
-          )}
+                {products.length > 0 ? (
+                  <ul className="divide-y divide-gray-300 overflow-y-auto">
+                    {products.map((product) => (
+                      <li
+                        key={product.id}
+                        onClick={() => handleProductClick(product.id)}
+                        className="cursor-pointer px-4 py-2 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none text-gray-700"
+                      >
+                        {product.name}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div className="p-4 text-gray-500 text-center">
+                    <p>No products found. Please try a different search.</p>
+                  </div>
+                )}
+              </div>
+            )}
         </div>
 
           {/* Desktop Menu Links */}
