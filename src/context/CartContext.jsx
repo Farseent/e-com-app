@@ -41,7 +41,7 @@ export const CartProvider = ({ children }) => {
       try {
         const updatedUser = {...newuser,cart:cartData}
         await updateCart(userId,updatedUser);
-        setCart(cartData);
+        setCart(cartData); 
       } catch (error) {
         console.log("Error updating cart:",error);        
       }

@@ -59,7 +59,7 @@ const Home = () => {
                 {/* Add to Cart Button */}
                 <div className="mt-4 flex justify-between items-center">
                   <button
-                    className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-sm transition"
+                    className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-sm transition "
                     onClick={(e) => {
                       e.preventDefault();
                       addToCart(product);

@@ -226,7 +226,7 @@ const Navbar = () => {
 
         <div
           id="mobile-menu"
-          className={`absolute top-14 left-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 w-full rounded-b-lg p-4 space-y-4 z-50 overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`absolute text-white top-14 left-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 w-full rounded-b-lg p-4 space-y-4 z-50 overflow-hidden transition-all duration-300 ease-in-out ${
             mobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           }`}
         >
@@ -245,7 +245,7 @@ const Navbar = () => {
           <NavLink
             to="/profile"
             className={({ isActive }) =>
-              `w-full flex items-center text-sm font-medium ${
+              `w-full flex items-center text-sm font-medium  ${
                 isActive ? "text-blue-600" : "hover:text-blue-400"
               }`
             }
