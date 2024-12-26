@@ -19,11 +19,11 @@
       "joined": "2024-12-20T11:56:17.286Z",
       "cart": [
         {
-          "id": "4",
-          "name": "OnePlus 12",
-          "price": "84999",
-          "image": "https://m.media-amazon.com/images/I/41OpAzcvdLL._SX300_SY300_QL70_FMwebp_.jpg",
-          "description": "16GB RAM + 512GB Storage | 6.7-inch AMOLED Display | Snapdragon 8 Gen 3 Processor | 50MP Triple Rear Camera | 100W Fast Charging Support",
+          "id": "3",
+          "name": "Google Pixel 9 Pro",
+          "price": "99999",
+          "image": "https://m.media-amazon.com/images/I/71uAesjXh5L._AC_SX569_.jpg",
+          "description": "12GB RAM + 256GB Storage | 6.7-inch OLED Display | Tensor G4 Chip | 50MP + 12MP Dual Rear Camera | Android 14 | 30W Fast Charging Support",
           "qty": 1
         }
       ]

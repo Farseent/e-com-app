@@ -54,7 +54,7 @@ const ProductDetails = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
                 onClick={() => {
                   addToCart(product);
-                  alert(`Added ${product.name} to the cart!`);
+                  // alert(`Added ${product.name} to the cart!`);
                 }}
               >
                 Add to Cart
