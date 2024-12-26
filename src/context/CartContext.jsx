@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { UserContext, useUser } from "./UserContext";
+import { useUser } from "./UserContext";
 import { getUserbyId } from "../api/userApi";
 import { updateCart } from "../api/productApi";
+import { useNavigate } from "react-router-dom";
 
 const CartContext = createContext();
 
@@ -11,6 +12,7 @@ export const CartProvider = ({ children }) => {
   const { user } = useUser();  
   const [totalPrice, setTotalPrice] = useState(0);
   const userId = localStorage.getItem('userId')
+  const navigate = useNavigate();
 
     const fetchUser = async (userId) => {
       try {
@@ -50,7 +52,11 @@ export const CartProvider = ({ children }) => {
 
 
   const addToCart = async (product , qty = 1) => {
-      if(!userId) return alert("Please login to add items to the cart");
+      if(!userId){
+        alert("Please Login to add products to cart");
+        navigate("/login");
+        return;
+      }  
       const existingitem = cart.find(item => item.id === product.id);
       let cartData;
       if(existingitem){
