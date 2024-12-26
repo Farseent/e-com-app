@@ -28,7 +28,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">Featured Products</h2>
         {error && <p className="text-red-500 mb-4">{error}</p>}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.length > 0 ? (
           products.map((product) => (
             <div
