@@ -51,7 +51,7 @@ const ProductDetails = () => {
             <div className="flex items-center mt-6 space-x-4">
               {/* Add to Cart Button */}
               <button
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
                 onClick={() => {
                   addToCart(product);
                   // alert(`Added ${product.name} to the cart!`);
@@ -62,7 +62,7 @@ const ProductDetails = () => {
 
               {/* Wishlist Button (optional) */}
               <button
-                className="border border-gray-300 text-gray-600 hover:bg-gray-100 px-6 py-3 rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
+                className="border border-gray-300 text-gray-600 hover:bg-gray-100 px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
               >
                 Add to Wishlist
               </button>
